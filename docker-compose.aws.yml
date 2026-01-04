@@ -1,0 +1,79 @@
+# Devometric - AWS Production Deployment
+# Simple docker-compose with Caddy for automatic SSL
+
+services:
+  caddy:
+    image: caddy:2-alpine
+    container_name: devometric_caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - app
+    restart: unless-stopped
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: devometric_app
+    env_file: .env
+    environment:
+      RAILS_ENV: production
+      DATABASE_URL: postgres://devometric:${POSTGRES_PASSWORD}@db:5432/devometric_production
+      DB_HOST: db
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      REDIS_URL: redis://redis:6379/0
+      RAILS_LOG_TO_STDOUT: "true"
+      RAILS_SERVE_STATIC_FILES: "true"
+      SOLID_QUEUE_IN_PUMA: "true"
+    expose:
+      - "80"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    volumes:
+      - app_storage:/rails/storage
+
+  db:
+    image: postgres:16-alpine
+    container_name: devometric_db
+    environment:
+      POSTGRES_USER: devometric
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: devometric_production
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U devometric"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: devometric_redis
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:
+  app_storage:
+  caddy_data:
+  caddy_config:

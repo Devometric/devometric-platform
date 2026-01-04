@@ -1,0 +1,19 @@
+<header class="bg-gray-900 border-b border-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center justify-between">
+      <a href="<%= root_path %>" class="flex items-center gap-2">
+        <img src="/logo.png" alt="Devometric" class="h-8 sm:h-10 w-auto">
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-400">
+        <%= link_to t('header.nav.demo'), demo_path, class: "hover:text-white transition-colors" %>
+        <%= link_to t('header.nav.how_it_works'), how_it_works_path, class: "hover:text-white transition-colors" %>
+        <%= link_to t('header.nav.security'), security_path, class: "hover:text-white transition-colors" %>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <%= render 'shared/language_switcher' %>
+      </div>
+    </div>
+  </div>
+</header>

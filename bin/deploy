@@ -1,0 +1,90 @@
+#!/bin/bash
+set -e
+
+# Devometric sample AWS Deployment Script. You need to make your own.
+# Usage: bin/deploy
+
+EC2_IP="${EC2_IP:-16.16.160.49}"
+EC2_KEY="${EC2_KEY:-$HOME/.ssh/devometric.pem}"
+EC2_HOST="ubuntu@${EC2_IP}"
+DEPLOY_DIR="/home/ubuntu/devometric"
+SSH_OPTS="-i ${EC2_KEY} -o StrictHostKeyChecking=no"
+
+echo "🚀 Deploying Devometric to AWS..."
+
+# Source secrets from .kamal/secrets if available
+if [ -f ".kamal/secrets" ]; then
+    echo "📂 Loading secrets from .kamal/secrets..."
+    set -a
+    source .kamal/secrets
+    set +a
+fi
+
+# Check required env vars
+if [ -z "$SECRET_KEY_BASE" ] || [ -z "$POSTGRES_PASSWORD" ] || [ -z "$ANTHROPIC_API_KEY" ]; then
+    echo "❌ Missing required environment variables!"
+    echo "Please set: SECRET_KEY_BASE, POSTGRES_PASSWORD, ANTHROPIC_API_KEY"
+    echo "Or add them to .kamal/secrets"
+    exit 1
+fi
+
+if [ -z "$SMTP_USERNAME" ] || [ -z "$SMTP_PASSWORD" ]; then
+    echo "⚠️  Warning: SMTP credentials not set. Emails won't be sent."
+    echo "Set SMTP_USERNAME and SMTP_PASSWORD in .kamal/secrets"
+fi
+
+if [ -z "$STRIPE_SECRET_KEY" ] || [ -z "$STRIPE_WEBHOOK_SECRET" ] || [ -z "$STRIPE_PRICE_B2B_MONTHLY" ]; then
+    echo "⚠️  Warning: Stripe credentials not fully set. Payments won't work."
+    echo "Set STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, STRIPE_PRICE_B2B_MONTHLY in .kamal/secrets"
+fi
+
+# Get Rails master key
+RAILS_MASTER_KEY=$(cat config/master.key)
+
+echo "📦 Syncing files to EC2..."
+rsync -avz -e "ssh ${SSH_OPTS}" --exclude='.git' --exclude='node_modules' --exclude='tmp' --exclude='log' \
+    --exclude='storage' --exclude='.kamal' \
+    ./ ${EC2_HOST}:${DEPLOY_DIR}/
+
+# Fix executable permissions for bin scripts
+ssh ${SSH_OPTS} ${EC2_HOST} "chmod +x ${DEPLOY_DIR}/bin/*"
+
+# Fix file permissions (ensure all files are readable)
+ssh ${SSH_OPTS} ${EC2_HOST} "find ${DEPLOY_DIR} -type f -exec chmod 644 {} + && find ${DEPLOY_DIR} -type d -exec chmod 755 {} + && chmod +x ${DEPLOY_DIR}/bin/*"
+
+echo "🔧 Creating .env file on server..."
+ssh ${SSH_OPTS} ${EC2_HOST} "cat > ${DEPLOY_DIR}/.env << EOF
+RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
+SECRET_KEY_BASE=${SECRET_KEY_BASE}
+POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+LLM_PROVIDER=anthropic
+ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+SMTP_ADDRESS=email-smtp.eu-north-1.amazonaws.com
+SMTP_PORT=587
+SMTP_USERNAME=${SMTP_USERNAME}
+SMTP_PASSWORD=${SMTP_PASSWORD}
+APP_HOST=devometric.ai
+APP_URL=https://devometric.ai
+STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
+STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET}
+STRIPE_PRICE_B2B_MONTHLY=${STRIPE_PRICE_B2B_MONTHLY}
+EOF"
+
+echo "🏗️  Building and starting containers..."
+ssh ${SSH_OPTS} ${EC2_HOST} "cd ${DEPLOY_DIR} && docker compose -f docker-compose.aws.yml build"
+ssh ${SSH_OPTS} ${EC2_HOST} "cd ${DEPLOY_DIR} && docker compose -f docker-compose.aws.yml up -d"
+
+echo "⏳ Waiting for services to start..."
+sleep 10
+
+echo "🗄️  Running database setup..."
+ssh ${SSH_OPTS} ${EC2_HOST} "cd ${DEPLOY_DIR} && docker compose -f docker-compose.aws.yml exec -T app bin/rails db:prepare"
+
+echo ""
+echo "✅ Deployment complete!"
+echo ""
+echo "🌐 Your app is running at: https://devometric.ai"
+echo ""
+echo "Useful commands:"
+echo "  ssh ${SSH_OPTS} ${EC2_HOST} 'cd ${DEPLOY_DIR} && docker compose -f docker-compose.aws.yml logs -f'"
+echo "  ssh ${SSH_OPTS} ${EC2_HOST} 'cd ${DEPLOY_DIR} && docker compose -f docker-compose.aws.yml exec app bin/rails console'"

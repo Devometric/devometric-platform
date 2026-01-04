@@ -1,0 +1,263 @@
+es:
+  languages:
+    en: "English"
+    fi: "Suomi"
+    sv: "Svenska"
+    es: "Español"
+    de: "Deutsch"
+
+  meta:
+    site_name: "Devometric"
+    default_title: "Devometric - Evaluación y coaching de habilidades IA para equipos de desarrollo"
+    default_description: "Mide y mejora las habilidades de IA de tu equipo de desarrollo con evaluaciones personalizadas, seguimiento del progreso y coaching."
+    keywords: "habilidades IA, equipo de desarrollo, evaluación IA, coaching IA, productividad de desarrolladores, adopción de IA"
+
+  header:
+    nav:
+      demo: "Demo"
+      how_it_works: "Cómo funciona"
+      security: "Seguridad"
+
+  footer:
+    tagline: "Plataforma de habilidades IA para equipos de desarrollo"
+    on_waitlist: "en la lista de espera"
+    contact: "Contacto"
+    privacy: "Privacidad"
+    terms: "Términos"
+    built_by: "Creado por"
+    other_projects: "Otros proyectos:"
+    open_source: "Código abierto"
+    about: "Sobre nosotros"
+    brands: "Marcas"
+    company_info:
+      owned_by: "Devometric y Devometric son propiedad de"
+      industry: "Consultoría y servicios IT"
+      business_id: "ID de empresa"
+
+  home:
+    hero:
+      title_line1: "Mide y mejora"
+      title_line2: "las habilidades IA de tu equipo"
+      subtitle: "Una plataforma que evalúa las capacidades de IA de tu equipo de desarrollo, hace seguimiento del progreso y ofrece coaching personalizado para acelerar la adopción de IA."
+      cta_try_free: "Probar gratis"
+      cta_demo: "Hacer la evaluación de habilidades IA"
+      cta_book_demo: "Reservar una demo"
+      feature_scoring: "Puntuación de madurez IA"
+      feature_tracking: "Seguimiento del progreso del equipo"
+      feature_coaching: "Coaching personalizado"
+
+    demo_preview:
+      title: "Míralo en acción"
+      subtitle: "Haz un recorrido interactivo por la plataforma"
+
+    pricing:
+      title: "Precios simples y transparentes"
+      subtitle: "Una tarifa fija para todo tu equipo. Sin cargos por usuario."
+      plan_name: "Plan de equipo"
+      cloud_version: "Versión en la nube"
+      currency_symbol: "€"
+      price: "189"
+      period: "/mes"
+      billing_info: "Facturación mensual. Cancela cuando quieras."
+      trial_info: "Prueba gratuita de 14 días incluida"
+      features_title: "Todo lo que necesitas:"
+      feature_unlimited_users: "<strong>Usuarios ilimitados</strong> - sin precios por usuario"
+      feature_widget: "Widget JavaScript integrable"
+      feature_custom_ai: "Instrucciones y políticas de IA personalizadas"
+      feature_domain: "Lista blanca de dominios y seguridad"
+      feature_analytics: "Panel de análisis de uso"
+      feature_sso: "Identificación de usuarios SSO"
+      feature_support: "Soporte prioritario por email"
+      feature_integrations: "Integración con Slack y Teams"
+      cta_start_trial: "Comenzar prueba gratuita de 14 días"
+      enterprise_text: "¿Necesitas funciones empresariales?"
+      enterprise_link: "Contáctanos"
+
+    features:
+      title: "Todo lo que necesitas"
+      subtitle: "Una plataforma completa para ayudar a tu equipo de desarrollo a adoptar las mejores prácticas de IA"
+      config_title: "Configuración de empresa"
+      config_description: "Personaliza el chatbot con tus políticas, estándares de código, stack tecnológico y cultura de trabajo."
+      widget_title: "Widget integrable"
+      widget_description: "Añade una sola etiqueta script a tu portal interno. Funciona en cualquier lugar donde se ejecute JavaScript."
+      domain_title: "Lista blanca de dominios"
+      domain_description: "Controla exactamente dónde se puede integrar tu chatbot con seguridad a nivel de dominio."
+      analytics_title: "Análisis de uso"
+      analytics_description: "Rastrea mensajes, sesiones y engagement de usuarios. Observa cómo tu equipo usa la IA."
+      sso_title: "Integración SSO"
+      sso_description: "Pasa IDs de usuario para respuestas personalizadas y análisis a nivel de equipo."
+      multilang_title: "Multiidioma"
+      multilang_description: "Soporta inglés, finlandés, español y alemán de forma nativa."
+
+    dashboard:
+      title: "Potente panel de administración"
+      subtitle: "Todo lo que necesitas para gestionar tu plataforma de coaching IA en un solo lugar"
+      nav_dashboard: "Panel"
+      nav_team: "Equipo"
+      nav_analytics: "Análisis"
+      nav_ai_trends: "Tendencias IA"
+      nav_settings: "Configuración"
+      stat_active_users: "Usuarios activos"
+      stat_messages_today: "Mensajes hoy"
+      stat_avg_score: "Puntuación IA promedio"
+      stat_sessions: "Sesiones"
+      stat_this_week: "+12% esta semana"
+      stat_vs_yesterday: "+8% vs ayer"
+      stat_this_month: "+5 pts este mes"
+      usage_overview: "Resumen de uso"
+      last_7_days: "Últimos 7 días"
+      recent_sessions: "Sesiones recientes"
+
+    team_performance:
+      title: "Sigue el progreso del equipo"
+      subtitle: "Observa cómo tu equipo de desarrollo adopta herramientas de IA. Identifica campeones, sigue la progresión de habilidades y entiende dónde necesita apoyo tu equipo."
+      feature_scores: "Puntuaciones individuales de madurez IA"
+      feature_gaps: "Análisis de brechas de habilidades del equipo"
+      feature_topics: "Temas y preguntas más frecuentes"
+      feature_progress: "Seguimiento del progreso a lo largo del tiempo"
+      section_title: "Rendimiento del equipo"
+      ai_champion: "Campeón IA"
+      proficient: "Competente"
+      developing: "En desarrollo"
+      beginner: "Principiante"
+      skill_gaps: "Brechas de habilidades del equipo"
+      skill_prompt: "Ingeniería de prompts"
+      skill_review: "Revisión de código con IA"
+      skill_testing: "Herramientas de testing IA"
+
+    ai_trends:
+      title: "Mantente al día con las tendencias de IA"
+      subtitle: "El panorama de IA cambia semanalmente. Curamos las herramientas, técnicas y recursos de aprendizaje más relevantes basados en el stack tecnológico y brechas de habilidades de tu equipo."
+      feature_curated: "Curado para tu stack tecnológico"
+      feature_updates: "Actualizaciones semanales de herramientas IA"
+      feature_learning: "Rutas de aprendizaje basadas en brechas de habilidades"
+      feature_recommendations: "Recomendaciones accionables"
+      section_title: "Tendencias IA y centro de aprendizaje"
+      new_badge: "5 nuevos"
+      hot_badge: "POPULAR"
+      new_tag: "NUEVO"
+      guide_tag: "GUÍA"
+      recommended_for: "Recomendado para: Todos los equipos de desarrollo"
+      lessons: "8 lecciones"
+      duration: "~1,5 horas"
+      enable_team: "Habilitar para tu equipo"
+
+    embed:
+      title: "Fácil de integrar"
+      subtitle: "Solo una línea de código"
+      comment: "<!-- Añadir a tu portal interno -->"
+
+    security:
+      title: "Seguridad de nivel empresarial"
+      subtitle: "La seguridad de tus datos es nuestra máxima prioridad. Construido para equipos conscientes de la seguridad."
+      encrypted_title: "Cifrado en reposo"
+      encrypted_description: "Todos los datos cifrados con AES-256"
+      byok_title: "Trae tu propia clave"
+      byok_description: "Usa tu propia clave API de Anthropic"
+      self_hosted_title: "Opción autoalojada"
+      self_hosted_description: "Despliega en tu propia infraestructura"
+      gdpr_title: "Compatible con GDPR"
+      gdpr_description: "Cumplimiento total de protección de datos de la UE"
+      learn_more: "Más información sobre nuestra seguridad"
+
+    how_it_works:
+      badge: "Nuestra tecnología"
+      title: "Impulsado por Devometric (tm)"
+      subtitle: "Devometric utiliza una arquitectura <strong>RAG (Retrieval-Augmented Generation)</strong> personalizada combinada con modelos de lenguaje de última generación para ofrecer evaluaciones precisas y recomendaciones personalizadas."
+      rag_title: "Sistema RAG personalizado"
+      rag_description: "Recuperación en tiempo real de las últimas herramientas, técnicas y mejores prácticas de IA"
+      llm_title: "LLM de alto rendimiento"
+      llm_description: "Impulsado por Claude, ofrece comprensión técnica matizada"
+      prompts_title: "Prompts diseñados"
+      prompts_description: "Prompts de sistema cuidadosamente elaborados para evaluaciones consistentes y de calidad"
+      cta: "Aprende cómo calculamos las puntuaciones"
+      flow_title: "El flujo de evaluación"
+      step1_title: "Evaluación conversacional"
+      step1_description: "El diálogo natural evalúa tus habilidades de IA"
+      step2_title: "Análisis RAG + LLM"
+      step2_description: "La IA evalúa respuestas con conocimiento actual"
+      step3_title: "Puntuación y plan personalizados"
+      step3_description: "Obtén tu puntuación de madurez IA + acciones"
+      flow_note: "La evaluación dura ~5 minutos"
+
+    cta:
+      title: "¿Listo para hacer que tu equipo sea nativo en IA?"
+      subtitle: "Comienza tu prueba gratuita hoy y nota la diferencia."
+      button: "Probar gratis"
+      trial_note: "Prueba gratuita de 14 días. No se requiere tarjeta de crédito para empezar."
+      newsletter_title: "¿Aún no estás listo? Recibe consejos de adopción de IA en tu correo."
+      email_placeholder: "Introduce tu email"
+      subscribe: "Suscribirse"
+
+  demo:
+    title: "Demo interactiva"
+    meta_title: "Demo de Devometric - Prueba la evaluación de habilidades IA"
+    meta_description: "Experimenta la evaluación de habilidades IA de Devometric de primera mano. Haz nuestra demo interactiva para ver cómo medimos y mejoramos las capacidades de IA de tu equipo."
+
+  how_it_works_page:
+    meta_title: "Cómo funciona Devometric - Puntuación de habilidades IA y recomendaciones explicadas | FAQ"
+    meta_description: "Aprende cómo Devometric calcula las puntuaciones de madurez IA usando tecnología RAG y LLMs. Entiende nuestra metodología de evaluación y obtén respuestas a preguntas frecuentes."
+    cta:
+      title: "¿Listo para evaluar las habilidades IA de tu equipo?"
+      description: "Experimenta nuestra evaluación impulsada por IA de primera mano con una demo gratuita."
+      demo_button: "Probar la demo"
+      trial_button: "Comenzar prueba gratuita"
+      trial_note: "Prueba gratuita de 14 días. No se requiere tarjeta de crédito."
+
+  security_page:
+    meta_title: "Seguridad - Devometric"
+    meta_description: "Conoce las funciones de seguridad de nivel empresarial de Devometric incluyendo cifrado, cumplimiento GDPR y opciones de autoalojamiento."
+
+  about:
+    meta_title: "Sobre nosotros - Devometric"
+    meta_description: "Conoce a Risto Holappa, fundador de Devometric y Devometric, con más de 10 años de experiencia en desarrollo de software moderno."
+    badge: "Sobre nosotros"
+    title: "Conoce al fundador"
+    subtitle: "Construyendo herramientas para ayudar a los equipos de desarrollo a prosperar en la era de la IA."
+    founder:
+      role: "Fundador y CTO"
+      bio_1: "Risto Holappa es un ingeniero de software y emprendedor con más de 10 años de experiencia en desarrollo de software moderno. Como CTO en dos empresas, ha liderado el desarrollo de aplicaciones web escalables, infraestructura en la nube y productos impulsados por IA."
+      bio_2: "Su pasión es ayudar a los equipos de desarrollo a adoptar herramientas de IA de manera efectiva y ser más productivos. Esto llevó a la creación de Devometric y la tecnología Devometric que lo impulsa."
+      bio_3: "Basado en Finlandia, Risto combina una profunda experiencia técnica con una comprensión práctica de lo que los equipos de desarrollo necesitan para tener éxito en el panorama tecnológico actual en rápida evolución."
+    companies:
+      title: "Empresas"
+      viher:
+        tagline: "Consultoría y servicios IT"
+        description: "Viher IT proporciona consultoría IT y servicios de desarrollo de software, especializándose en tecnologías web modernas, soluciones en la nube e integración de IA."
+      reipas:
+        tagline: "Consultoría empresarial"
+        description: "Reipas Consulting ofrece servicios de consultoría empresarial y tecnológica, ayudando a las empresas a optimizar sus operaciones y estrategias digitales."
+    products:
+      title: "Productos y marcas"
+      devometric:
+        description: "Plataforma de evaluación y coaching de habilidades IA para equipos de desarrollo. Mide, sigue y mejora las capacidades de IA de tu equipo."
+      devometric_ai:
+        description: "La tecnología propietaria de IA basada en RAG que impulsa las evaluaciones inteligentes y recomendaciones personalizadas de Devometric."
+        note: "Impulsa Devometric"
+      learn_more: "Saber más"
+    contact:
+      title: "Conectemos"
+      subtitle: "¿Interesado en saber más sobre Devometric o discutir una colaboración?"
+      cta_demo: "Reservar una demo"
+      cta_email: "Enviar un email"
+
+  book_demo:
+    meta_title: "Reservar una demo - Devometric"
+    meta_description: "Programa una demo personalizada de Devometric. Descubre cómo nuestra plataforma de evaluación de habilidades IA puede ayudar a tu equipo de desarrollo."
+    badge: "Empezar"
+    title: "Reservar una demo"
+    subtitle: "Programa un recorrido personalizado por Devometric y descubre cómo puede ayudar a tu equipo a ser nativo en IA."
+    form:
+      name_label: "Tu nombre"
+      name_placeholder: "Juan García"
+      email_label: "Email de trabajo"
+      email_placeholder: "juan@empresa.com"
+      company_label: "Empresa"
+      company_placeholder: "Empresa S.L."
+      team_size_label: "Tamaño del equipo"
+      team_size_placeholder: "Selecciona tamaño del equipo"
+      message_label: "¿Algo más que debamos saber?"
+      message_placeholder: "Cuéntanos sobre los objetivos de adopción de IA de tu equipo..."
+      submit: "Solicitar demo"
+      privacy_note: "Te responderemos en 24 horas."
+    alternative: "¿Prefieres email? Contáctanos directamente en"

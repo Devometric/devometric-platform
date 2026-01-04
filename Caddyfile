@@ -1,0 +1,7 @@
+devometric.com {
+    reverse_proxy app:80
+}
+
+www.devometric.com {
+    redir https://devometric.com{uri}
+}

@@ -1,56 +1,279 @@
-*.gem
-*.rbc
-/.config
+# ================================
+# Devometric - .gitignore
+# ================================
+
+# ================================
+# Environment & Secrets
+# ================================
+.env
+.env.*
+!.env.example
+.envrc
+
+# Rails credentials & secrets
+# master.key is the decryption key - NEVER commit
+config/master.key
+config/credentials/*.key
+
+# credentials.yml.enc is safe to commit (it's encrypted)
+# config/credentials.yml.enc  # OK to commit
+
+# SSL/TLS certificates
+*.pem
+*.crt
+# Note: *.key would match master.key, handled above
+
+# API keys file
+.api_keys
+secrets.yml
+secrets.yml.enc
+
+# ================================
+# Rails
+# ================================
+# Ignore bundler config
+/.bundle
+
+# Ignore all logfiles and tempfiles
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore storage (Active Storage, Action Mailbox, etc.)
+/storage/*
+!/storage/.keep
+
+# Ignore uploaded files in development
+/public/uploads
+
+# Ignore precompiled assets
+/public/assets
+/public/packs
+/public/packs-test
+.sass-cache/
+
+# Ignore master key for decrypting credentials and more
+/config/master.key
+
+# Ignore deploy config (contains server IPs, keys)
+/config/deploy.yml
+
+# ================================
+# Database
+# ================================
+# SQLite databases
+*.sqlite3
+*.sqlite3-*
+
+# Database dumps
+*.sql
+*.dump
+*.sql.gz
+db/*.sqlite3
+db/*.sql
+
+# ================================
+# Testing
+# ================================
 /coverage/
-/InstalledFiles
-/pkg/
 /spec/reports/
 /spec/examples.txt
 /test/tmp/
 /test/version_tmp/
-/tmp/
 
-# Used by dotenv library to load environment variables.
-# .env
+# SimpleCov
+coverage/
 
-# Ignore Byebug command history file.
+# ================================
+# Ruby
+# ================================
+*.gem
+*.rbc
+/.config
+/InstalledFiles
+/pkg/
 .byebug_history
-
-## Specific to RubyMotion:
 .dat*
 .repl_history
-build/
-*.bridgesupport
-build-iPhoneOS/
-build-iPhoneSimulator/
 
-## Specific to RubyMotion (use of CocoaPods):
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# vendor/Pods/
-
-## Documentation cache and generated files:
+# Documentation
 /.yardoc/
 /_yardoc/
 /doc/
 /rdoc/
 
-## Environment normalization:
-/.bundle/
+# Environment normalization
 /vendor/bundle
 /lib/bundler/man/
 
-# for a library or gem, you might want to ignore these files since the code is
-# intended to run in multiple environments; otherwise, check them in:
-# Gemfile.lock
-# .ruby-version
-# .ruby-gemset
-
-# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+# RVM
 .rvmrc
+# .ruby-version  # Commit this for consistent Ruby version
+.ruby-gemset
 
-# Used by RuboCop. Remote config files pulled in from inherit_from directive.
-# .rubocop-https?--*
+# rbenv
+.rbenv-vars
+
+# ================================
+# Node / JavaScript
+# ================================
+/node_modules/
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+.pnp.*
+.npm
+
+# ================================
+# IDE & Editors
+# ================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains (RubyMine, IntelliJ)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+.#*
+
+# TextMate
+*.tmproj
+*.tmproject
+tmtags
+
+# ================================
+# Operating System
+# ================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ================================
+# Docker
+# ================================
+# Docker override files
+docker-compose.override.yml
+docker-compose.local.yml
+
+# Docker volumes (if mounted locally)
+.docker/
+docker-data/
+
+# ================================
+# Deployment
+# ================================
+# Kamal deployment secrets
+.kamal/
+.env.kamal
+
+# Capistrano
+/config/deploy/*.rb
+!/config/deploy/*.rb.example
+
+# ================================
+# Misc
+# ================================
+# Ignore Byebug command history
+.byebug_history
+
+# Ignore Spring files
+/spring/*.pid
+
+# Ignore bootsnap cache
+/tmp/cache/bootsnap*
+
+# Ignore Solargraph
+.solargraph.yml
+
+# Ignore local notes
+TODO.md
+NOTES.md
+*.local.md
+scratch/
+notes/
+
+# Ignore local scripts
+local/
+scripts/local/
+
+# Ignore backup files
+*.bak
+*.backup
+*.old
+
+# Ignore lock files that shouldn't be shared
+# (Gemfile.lock IS committed for apps, but not for gems)
+# Gemfile.lock
+
+# RuboCop cache
+.rubocop-*
+rubocop-*.yml
+
+# Letter Opener (development emails)
+/tmp/letter_opener/
+
+# Ignore PID files
+*.pid
+*.pid.lock
+
+# ================================
+# Project-specific
+# ================================
+# Local development overrides
+config/settings.local.yml
+config/settings/*.local.yml
+
+# Ollama models (large files)
+ollama_models/
+models/
+
+# Log files
+*.log
+logs/
+
+# Temporary uploads
+/tmp/uploads/
+
+# Development database seeds backup
+db/seeds.local.rb
+claude
+.claude/

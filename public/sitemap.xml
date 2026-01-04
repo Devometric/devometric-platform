@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage -->
+  <url>
+    <loc>https://devometric.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/fi/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/sv/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Demo page -->
+  <url>
+    <loc>https://devometric.com/demo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/demo"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/demo"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/demo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/demo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/demo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/demo"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/fi/demo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/demo"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/demo"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/demo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/demo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/demo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/demo"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/sv/demo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/demo"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/demo"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/demo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/demo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/demo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/demo"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/es/demo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/demo"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/demo"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/demo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/demo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/demo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/demo"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/de/demo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/demo"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/demo"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/demo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/demo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/demo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/demo"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- How It Works page -->
+  <url>
+    <loc>https://devometric.com/how-it-works</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/how-it-works"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/fi/how-it-works</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/how-it-works"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/sv/how-it-works</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/how-it-works"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/es/how-it-works</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/how-it-works"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/de/how-it-works</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/how-it-works"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Security page -->
+  <url>
+    <loc>https://devometric.com/security</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/security"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/security"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/security"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/security"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/security"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/security"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/fi/security</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/security"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/security"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/security"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/security"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/security"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/security"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/sv/security</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/security"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/security"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/security"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/security"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/security"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/security"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/es/security</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/security"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/security"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/security"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/security"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/security"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/security"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://devometric.com/de/security</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devometric.com/security"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://devometric.com/fi/security"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://devometric.com/sv/security"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://devometric.com/es/security"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://devometric.com/de/security"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devometric.com/security"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>

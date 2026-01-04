@@ -1,0 +1,701 @@
+<% content_for :title, t('how_it_works_page.meta_title') %>
+<% content_for :meta_description, t('how_it_works_page.meta_description') %>
+<% content_for :og_title, t('how_it_works_page.meta_title') %>
+<% content_for :og_description, t('how_it_works_page.meta_description') %>
+
+<% content_for :head do %>
+<!-- FAQPage Structured Data for Google Rich Results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is RAG and why does Devometric use it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RAG (Retrieval-Augmented Generation) is an AI architecture that enhances large language models by giving them access to external knowledge bases. Instead of relying solely on training data, RAG systems can retrieve and reference up-to-date, specific information. Devometric uses RAG to ensure our assessments and recommendations reflect the latest AI tools, techniques, and best practices in software development."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the AI Nativeness Score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The score is designed to be directionally accurate and actionable rather than a precise measurement. Our assessment methodology was developed by analyzing patterns from thousands of developer interactions with AI tools. The score is most valuable for tracking individual progress over time, identifying specific skill gaps, and comparing relative strengths across the four dimensions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which LLM does Devometric use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Devometric primarily uses Claude by Anthropic, currently one of the highest-performing models for nuanced conversation and technical understanding. We specifically chose Claude for its strong reasoning capabilities and ability to maintain context across complex, multi-turn conversations. Enterprise customers with BYOK (Bring Your Own Key) can use their own Anthropic API key."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Devometric ensure assessment quality and consistency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We use carefully engineered system prompts that guide the AI through a structured assessment methodology. These prompts ensure consistent evaluation criteria across all assessments, natural conversational flow, comprehensive coverage of all four scoring dimensions, and adaptation to individual responses without losing assessment integrity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my assessment data used to train AI models?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Your assessment conversations are not used to train any AI models. We use Anthropic's API with data retention disabled, meaning your conversations are not stored by the AI provider after processing. Your data is stored securely in our system solely for providing assessment results, tracking progress, and generating personalized recommendations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should team members retake the assessment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We recommend quarterly assessments for most teams. This cadence allows enough time to implement recommendations and develop new skills while keeping pace with the rapidly evolving AI landscape. Teams actively focused on AI adoption initiatives may benefit from monthly check-ins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Devometric calculate the AI Nativeness Score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The AI Nativeness Score is a 100-point score calculated across four dimensions: Tool Awareness (0-25 points) measuring knowledge of AI coding tools, Daily Integration (0-25 points) measuring how embedded AI is in workflows, Prompt Skills (0-25 points) measuring ability to communicate with AI systems, and Critical Thinking (0-25 points) measuring ability to evaluate and improve AI output."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Devometric integrate with existing tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Devometric offers an embeddable widget you can add to any internal portal with a single script tag, SSO integration for personalized tracking, domain whitelisting for security, and custom configuration to tailor assessments to your tech stack and policies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Devometric have Microsoft Teams or Slack integration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Devometric offers native plugins for both Microsoft Teams and Slack. Team members can take AI skills assessments directly within their communication platform without leaving the app. Managers receive automated reports and can track team progress through dedicated channels. The integrations support slash commands for quick assessments and scheduled reminders for periodic skill check-ins."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- HowTo Structured Data for the Assessment Process -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Get Your AI Nativeness Score with Devometric",
+  "description": "Learn how Devometric assesses your AI skills and generates personalized recommendations using RAG technology and advanced LLMs.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Start the Assessment",
+      "text": "Engage with the Devometric assessment chatbot through natural conversation about your AI tool usage and workflows."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "RAG Knowledge Retrieval",
+      "text": "The system retrieves relevant AI tools, trends, and best practices from our curated knowledge base."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "LLM Analysis",
+      "text": "Advanced AI powered by Claude analyzes your responses using engineered system prompts for consistent evaluation."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Receive Your Score",
+      "text": "Get your AI Nativeness Score (0-100) with breakdown across four dimensions and personalized recommendations."
+    }
+  ],
+  "totalTime": "PT5M"
+}
+</script>
+
+<!-- Article Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How Devometric Calculates Your AI Skills Score",
+  "description": "A comprehensive guide to understanding how Devometric uses RAG architecture, LLMs, and engineered prompts to assess AI skills and generate recommendations.",
+  "author": {
+    "@type": "Organization",
+    "name": "Devometric"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Devometric",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://devometric.com/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://devometric.com/how-it-works"
+  }
+}
+</script>
+<% end %>
+
+<div class="min-h-screen text-white">
+  <%= render 'shared/header' %>
+
+    <div class="bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+      <div class="flex justify-center mb-8">
+        <a href="<%= root_path %>">
+          <img src="/logo.png" alt="Devometric" class="h-16 sm:h-20 w-auto">
+        </a>
+      </div>
+
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">
+          <span class="block text-white">How Devometric</span>
+          <span class="block text-emerald-400">Calculates Your AI Score</span>
+        </h1>
+        <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
+          Understand the technology behind our AI skills assessment platform and how we deliver personalized recommendations to accelerate your team's AI adoption.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-800 border-y border-gray-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex flex-wrap justify-center gap-4 text-sm">
+        <a href="#technology" class="px-4 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 transition-colors">Our Technology</a>
+        <a href="#scoring" class="px-4 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 transition-colors">Scoring System</a>
+        <a href="#recommendations" class="px-4 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 transition-colors">Recommendations</a>
+        <a href="#faq" class="px-4 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 transition-colors">FAQ</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="technology" class="bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-16">
+        <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm font-medium rounded-full">Our Technology</span>
+        <h2 class="text-3xl font-bold mt-4">Powered by Advanced AI (tm) Architecture</h2>
+        <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+          Devometric combines cutting-edge AI technologies to deliver accurate assessments and actionable recommendations.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div class="space-y-8">
+          <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Custom RAG Architecture</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                  Our platform utilizes <strong class="text-white">Retrieval-Augmented Generation (RAG)</strong>, an advanced AI technique that combines real-time information retrieval with large language model capabilities. This allows our system to access and synthesize the latest AI tools, techniques, and best practices when evaluating your team's skills.
+                </p>
+                <div class="mt-4 p-4 bg-gray-900/50 rounded-lg">
+                  <p class="text-xs text-gray-500 uppercase tracking-wider mb-2">Technical Detail</p>
+                  <p class="text-sm text-gray-300">
+                    RAG enables context-aware responses by retrieving relevant knowledge from our curated database of AI development practices, then augmenting the LLM's response with this specific, up-to-date information.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg mb-2">State-of-the-Art LLM Integration</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                  Devometric is powered by the <strong class="text-white">latest high-performance Large Language Models</strong>, including Claude by Anthropic. These models are specifically chosen for their superior reasoning capabilities, nuanced understanding of technical concepts, and ability to provide thoughtful, contextual feedback.
+                </p>
+                <div class="mt-4 p-4 bg-gray-900/50 rounded-lg">
+                  <p class="text-xs text-gray-500 uppercase tracking-wider mb-2">Why It Matters</p>
+                  <p class="text-sm text-gray-300">
+                    Modern LLMs can understand the subtle differences between someone who uses AI as a crutch versus someone who leverages it strategically, enabling more accurate skill assessments.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Engineered System Prompts</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                  Our assessment engine uses <strong class="text-white">meticulously crafted system prompts</strong> developed through extensive research and iteration. These prompts guide the AI to conduct structured, consistent assessments while maintaining a natural, conversational experience.
+                </p>
+                <div class="mt-4 p-4 bg-gray-900/50 rounded-lg">
+                  <p class="text-xs text-gray-500 uppercase tracking-wider mb-2">The Difference</p>
+                  <p class="text-sm text-gray-300">
+                    Unlike generic AI chatbots, our prompts are specifically designed for skills assessment, ensuring every conversation follows a validated methodology while adapting to individual responses.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-8">
+          <h3 class="font-semibold text-lg mb-6 text-center">How It Works Together</h3>
+
+          <div class="space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-gray-900 font-bold flex-shrink-0">1</div>
+              <div class="flex-1 bg-gray-900/50 rounded-lg p-4">
+                <p class="font-medium text-sm">User Interaction</p>
+                <p class="text-xs text-gray-400 mt-1">Team member engages with the assessment chatbot</p>
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-gray-900 font-bold flex-shrink-0">2</div>
+              <div class="flex-1 bg-gray-900/50 rounded-lg p-4">
+                <p class="font-medium text-sm">RAG Knowledge Retrieval</p>
+                <p class="text-xs text-gray-400 mt-1">System retrieves relevant AI tools, trends, and best practices</p>
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-gray-900 font-bold flex-shrink-0">3</div>
+              <div class="flex-1 bg-gray-900/50 rounded-lg p-4">
+                <p class="font-medium text-sm">LLM Processing</p>
+                <p class="text-xs text-gray-400 mt-1">Advanced AI analyzes responses using our custom system prompts</p>
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-gray-900 font-bold flex-shrink-0">4</div>
+              <div class="flex-1 bg-gray-900/50 rounded-lg p-4">
+                <p class="font-medium text-sm">Score & Recommendations</p>
+                <p class="text-xs text-gray-400 mt-1">Personalized AI Nativeness Score with actionable next steps</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-gray-700">
+            <p class="text-xs text-gray-500 text-center">
+              All processing happens in real-time, with your data encrypted and secure.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="scoring" class="bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-16">
+        <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm font-medium rounded-full">Scoring System</span>
+        <h2 class="text-3xl font-bold mt-4">The AI Nativeness Score Explained</h2>
+        <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+          Our comprehensive 100-point scoring system evaluates four key dimensions of AI proficiency in software development.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="bg-gray-900/50 border border-gray-700 rounded-xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <span class="text-2xl font-bold text-blue-400">25</span>
+          </div>
+          <h3 class="font-semibold mb-2">Tool Awareness</h3>
+          <p class="text-gray-400 text-sm">Knowledge of available AI coding tools, their capabilities, and appropriate use cases. From GitHub Copilot to specialized AI IDEs.</p>
+          <div class="mt-4 pt-4 border-t border-gray-700">
+            <p class="text-xs text-gray-500">Evaluated through: Tool familiarity questions, knowledge of recent releases</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-900/50 border border-gray-700 rounded-xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+            </div>
+            <span class="text-2xl font-bold text-purple-400">25</span>
+          </div>
+          <h3 class="font-semibold mb-2">Daily Integration</h3>
+          <p class="text-gray-400 text-sm">How deeply AI tools are embedded into daily workflows. Measures practical adoption, not just awareness.</p>
+          <div class="mt-4 pt-4 border-t border-gray-700">
+            <p class="text-xs text-gray-500">Evaluated through: Workflow descriptions, frequency of use, integration depth</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-900/50 border border-gray-700 rounded-xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <span class="text-2xl font-bold text-orange-400">25</span>
+          </div>
+          <h3 class="font-semibold mb-2">Prompt Skills</h3>
+          <p class="text-gray-400 text-sm">Ability to communicate effectively with AI systems. Includes prompt engineering, context-setting, and iterative refinement.</p>
+          <div class="mt-4 pt-4 border-t border-gray-700">
+            <p class="text-xs text-gray-500">Evaluated through: Practical prompt challenges, articulation quality</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-900/50 border border-gray-700 rounded-xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <span class="text-2xl font-bold text-emerald-400">25</span>
+          </div>
+          <h3 class="font-semibold mb-2">Critical Thinking</h3>
+          <p class="text-gray-400 text-sm">Ability to evaluate, verify, and improve AI-generated output. Understanding limitations and knowing when not to use AI.</p>
+          <div class="mt-4 pt-4 border-t border-gray-700">
+            <p class="text-xs text-gray-500">Evaluated through: Quality assessment approaches, error handling strategies</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-700 rounded-xl p-8">
+        <h3 class="font-semibold text-lg mb-6 text-center">Score Interpretation Guide</h3>
+        <div class="grid md:grid-cols-4 gap-4">
+          <div class="text-center p-4">
+            <div class="w-16 h-16 mx-auto bg-red-500/20 rounded-full flex items-center justify-center mb-3">
+              <span class="text-xl font-bold text-red-400">0-25</span>
+            </div>
+            <p class="font-medium text-red-400">Beginner</p>
+            <p class="text-xs text-gray-500 mt-1">Starting the AI journey</p>
+          </div>
+          <div class="text-center p-4">
+            <div class="w-16 h-16 mx-auto bg-yellow-500/20 rounded-full flex items-center justify-center mb-3">
+              <span class="text-xl font-bold text-yellow-400">26-50</span>
+            </div>
+            <p class="font-medium text-yellow-400">Developing</p>
+            <p class="text-xs text-gray-500 mt-1">Building foundational skills</p>
+          </div>
+          <div class="text-center p-4">
+            <div class="w-16 h-16 mx-auto bg-blue-500/20 rounded-full flex items-center justify-center mb-3">
+              <span class="text-xl font-bold text-blue-400">51-75</span>
+            </div>
+            <p class="font-medium text-blue-400">Proficient</p>
+            <p class="text-xs text-gray-500 mt-1">Effective AI user</p>
+          </div>
+          <div class="text-center p-4">
+            <div class="w-16 h-16 mx-auto bg-emerald-500/20 rounded-full flex items-center justify-center mb-3">
+              <span class="text-xl font-bold text-emerald-400">76-100</span>
+            </div>
+            <p class="font-medium text-emerald-400">AI Champion</p>
+            <p class="text-xs text-gray-500 mt-1">Leading AI adoption</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="recommendations" class="bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-16">
+        <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm font-medium rounded-full">Recommendations</span>
+        <h2 class="text-3xl font-bold mt-4">Personalized Learning Paths</h2>
+        <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+          Every recommendation is tailored to your specific skill gaps, tech stack, and learning goals.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-xl font-semibold mb-6">How We Generate Recommendations</h3>
+
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-medium">Gap Analysis</p>
+                <p class="text-gray-400 text-sm mt-1">Our AI identifies specific areas where your scores indicate room for improvement, cross-referencing with your role and responsibilities.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-medium">Tech Stack Context</p>
+                <p class="text-gray-400 text-sm mt-1">Recommendations are filtered through your company's technology stack, ensuring suggested tools and practices are immediately applicable.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-medium">Current Trends Integration</p>
+                <p class="text-gray-400 text-sm mt-1">Our RAG system ensures recommendations include the latest AI tools and techniques relevant to your development workflow.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-medium">Actionable Steps</p>
+                <p class="text-gray-400 text-sm mt-1">Every recommendation includes concrete next steps you can take immediately, not just theoretical advice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+            <span class="text-sm font-medium text-gray-400">Example Recommendation</span>
+          </div>
+
+          <div class="space-y-4">
+            <div class="p-4 bg-gray-900/50 rounded-lg border-l-4 border-orange-500">
+              <p class="text-sm font-medium text-orange-400 mb-1">Skill Gap Identified</p>
+              <p class="text-sm text-gray-300">Prompt Engineering (scored 12/25)</p>
+            </div>
+
+            <div class="p-4 bg-gray-900/50 rounded-lg">
+              <p class="text-sm font-medium text-emerald-400 mb-2">Recommended Action</p>
+              <p class="text-sm text-gray-300 mb-3">Practice structured prompting with the RISE framework (Role, Instructions, Steps, End goal) for your React development tasks.</p>
+
+              <div class="space-y-2">
+                <div class="flex items-center gap-2 text-xs text-gray-400">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Estimated time: 30 min/day for 1 week</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-gray-400">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                  <span>Expected improvement: +8-10 points</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="faq" class="bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-16">
+        <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm font-medium rounded-full">FAQ</span>
+        <h2 class="text-3xl font-bold mt-4">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        <details class="group bg-gray-900/50 border border-gray-700 rounded-xl">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <h3 class="font-medium pr-4">What is RAG and why does Devometric use it?</h3>
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-400 text-sm">
+            <p class="mb-3"><strong class="text-white">RAG (Retrieval-Augmented Generation)</strong> is an AI architecture that enhances large language models by giving them access to external knowledge bases. Instead of relying solely on training data, RAG systems can retrieve and reference up-to-date, specific information.</p>
+            <p>Devometric uses RAG to ensure our assessments and recommendations reflect the latest AI tools, techniques, and best practices in software development. This means when we mention a tool like "Claude Code" or "Cursor," we're drawing from current, accurate information rather than potentially outdated training data.</p>
+          </div>
+        </details>
+
+        <details class="group bg-gray-900/50 border border-gray-700 rounded-xl">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <h3 class="font-medium pr-4">How accurate is the AI Nativeness Score?</h3>
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-400 text-sm">
+            <p class="mb-3">The score is designed to be <strong class="text-white">directionally accurate and actionable</strong> rather than a precise measurement. Our assessment methodology was developed by analyzing patterns from thousands of developer interactions with AI tools.</p>
+            <p>The score is most valuable for: (1) tracking individual progress over time, (2) identifying specific skill gaps, and (3) comparing relative strengths across the four dimensions. We recommend using it as a guide for development, not as an absolute measure of ability.</p>
+          </div>
+        </details>
+
+        <details class="group bg-gray-900/50 border border-gray-700 rounded-xl">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <h3 class="font-medium pr-4">Which LLM does Devometric use?</h3>
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-400 text-sm">
+            <p class="mb-3">Devometric primarily uses <strong class="text-white">Claude by Anthropic</strong>, currently one of the highest-performing models for nuanced conversation and technical understanding. We specifically chose Claude for its strong reasoning capabilities and ability to maintain context across complex, multi-turn conversations.</p>
+            <p>For enterprise customers with BYOK (Bring Your Own Key) enabled, you can use your own Anthropic API key, giving you full control over your AI infrastructure and costs.</p>
+          </div>
+        </details>
+
+        <details class="group bg-gray-900/50 border border-gray-700 rounded-xl">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <h3 class="font-medium pr-4">How does Devometric ensure assessment quality and consistency?</h3>
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-400 text-sm">
+            <p class="mb-3">We use <strong class="text-white">carefully engineered system prompts</strong> that guide the AI through a structured assessment methodology. These prompts ensure:</p>
+            <ul class="list-disc list-inside space-y-1 mb-3">
+              <li>Consistent evaluation criteria across all assessments</li>
+              <li>Natural, conversational flow that doesn't feel like a test</li>
+              <li>Comprehensive coverage of all four scoring dimensions</li>
+              <li>Adaptation to individual responses without losing assessment integrity</li>
+            </ul>
+            <p>Our prompts are continuously refined based on assessment outcomes and user feedback to improve accuracy and relevance.</p>
+          </div>
+        </details>
+
+        <details class="group bg-gray-900/50 border border-gray-700 rounded-xl">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <h3 class="font-medium pr-4">Is my assessment data used to train AI models?</h3>
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-400 text-sm">
+            <p class="mb-3"><strong class="text-white">No.</strong> Your assessment conversations are not used to train any AI models. We use Anthropic's API with data retention disabled, meaning your conversations are not stored by the AI provider after processing.</p>
+            <p>Your data is stored securely in our system solely for the purpose of providing your assessment results, tracking your progress, and generating personalized recommendations. Enterprise customers can also opt for self-hosted deployments for complete data control.</p>
+          </div>
+        </details>
+
+        <details class="group bg-gray-900/50 border border-gray-700 rounded-xl">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <h3 class="font-medium pr-4">How often should team members retake the assessment?</h3>
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-400 text-sm">
+            <p class="mb-3">We recommend <strong class="text-white">quarterly assessments</strong> for most teams. This cadence allows enough time to implement recommendations and develop new skills while keeping pace with the rapidly evolving AI landscape.</p>
+            <p>However, teams actively focused on AI adoption initiatives may benefit from monthly check-ins, while stable teams might prefer bi-annual assessments. The platform tracks progress over time regardless of frequency.</p>
+          </div>
+        </details>
+
+        <details class="group bg-gray-900/50 border border-gray-700 rounded-xl">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <h3 class="font-medium pr-4">Can Devometric integrate with our existing tools?</h3>
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-400 text-sm">
+            <p class="mb-3">Yes! Devometric is designed for <strong class="text-white">seamless integration</strong> into your existing workflow:</p>
+            <ul class="list-disc list-inside space-y-1">
+              <li><strong>Embeddable widget</strong> - Add to any internal portal with a single script tag</li>
+              <li><strong>SSO integration</strong> - Pass user IDs for personalized tracking</li>
+              <li><strong>Domain whitelisting</strong> - Control exactly where the widget can be embedded</li>
+              <li><strong>Custom configuration</strong> - Tailor assessments to your tech stack and policies</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="group bg-gray-900/50 border border-gray-700 rounded-xl">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <h3 class="font-medium pr-4">Does Devometric have Microsoft Teams or Slack integration?</h3>
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-400 text-sm">
+            <p class="mb-3">Yes! Devometric offers <strong class="text-white">native plugins for both Microsoft Teams and Slack</strong>. These integrations allow your team to:</p>
+            <ul class="list-disc list-inside space-y-1 mb-3">
+              <li>Take AI skills assessments directly within their communication platform</li>
+              <li>Receive automated reports and progress updates in dedicated channels</li>
+              <li>Use slash commands for quick assessments (e.g., <code class="bg-gray-800 px-1 rounded">/devometric assess</code>)</li>
+              <li>Set up scheduled reminders for periodic skill check-ins</li>
+            </ul>
+            <p>The plugins ensure team members never need to leave the tools they already use daily, maximizing adoption and engagement.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white"><%= t('how_it_works_page.cta.title') %></h2>
+        <p class="text-gray-400 mb-8">
+          <%= t('how_it_works_page.cta.description') %>
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <%= link_to demo_path, class: "inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold rounded-lg border border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/10 transition-colors" do %>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <%= t('how_it_works_page.cta.demo_button') %>
+          <% end %>
+          <%= button_to t('how_it_works_page.cta.trial_button'), start_checkout_path, method: :post,
+              data: { turbo: false },
+              class: "px-8 py-4 text-lg font-semibold rounded-lg text-gray-900 bg-emerald-500 hover:bg-emerald-400 transition-colors cursor-pointer" %>
+        </div>
+        <p class="text-sm text-gray-500 mt-4"><%= t('how_it_works_page.cta.trial_note') %></p>
+      </div>
+    </div>
+  </div>
+
+  <%= render 'shared/footer' %>
+</div>

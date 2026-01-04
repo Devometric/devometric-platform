@@ -1,0 +1,273 @@
+fi:
+  # Language names (native)
+  languages:
+    en: "English"
+    fi: "Suomi"
+    sv: "Svenska"
+    es: "Español"
+    de: "Deutsch"
+
+  # Meta/SEO
+  meta:
+    site_name: "Devometric"
+    default_title: "Devometric - Tekoälytaitojen arviointi ja valmennus kehitystiimeille"
+    default_description: "Mittaa ja paranna kehitystiimisi tekoälytaitoja yksilöllisillä arvioinneilla, edistymisen seurannalla ja valmennuksella."
+    keywords: "tekoälytaidot, kehitystiimi, tekoälyarviointi, tekoälyvalmennus, kehittäjätuottavuus, tekoälyn käyttöönotto"
+
+  # Header navigation
+  header:
+    nav:
+      demo: "Demo"
+      how_it_works: "Miten se toimii"
+      security: "Tietoturva"
+
+  # Footer
+  footer:
+    tagline: "Tekoälytaitojen alusta kehitystiimeille"
+    on_waitlist: "jonotuslistalla"
+    contact: "Yhteystiedot"
+    privacy: "Tietosuoja"
+    terms: "Ehdot"
+    built_by: "Tekijä"
+    other_projects: "Muut projektit:"
+    open_source: "Avoin lähdekoodi"
+    about: "Tietoa meistä"
+    brands: "Brändit"
+    company_info:
+      owned_by: "Devometric & Devometric omistaja"
+      industry: "IT-konsultointi ja -palvelut"
+      business_id: "Y-tunnus"
+
+  # Homepage
+  home:
+    hero:
+      title_line1: "Mittaa ja paranna"
+      title_line2: "tiimisi tekoälytaitoja"
+      subtitle: "Alusta, joka arvioi kehitystiimisi tekoälyvalmiudet, seuraa edistymistä ja tarjoaa yksilöllistä valmennusta tekoälyn käyttöönoton nopeuttamiseksi."
+      cta_try_free: "Kokeile ilmaiseksi"
+      cta_demo: "Tee tekoälytaitojen arviointi"
+      cta_book_demo: "Varaa demo"
+      feature_scoring: "Tekoälytaitojen pisteytys"
+      feature_tracking: "Tiimin edistymisen seuranta"
+      feature_coaching: "Yksilöllinen valmennus"
+
+    demo_preview:
+      title: "Katso toiminnassa"
+      subtitle: "Tutustu alustaan interaktiivisesti"
+
+    pricing:
+      title: "Yksinkertainen, läpinäkyvä hinnoittelu"
+      subtitle: "Yksi kiinteä hinta koko tiimillesi. Ei käyttäjäkohtaisia maksuja."
+      plan_name: "Tiimipaketti"
+      cloud_version: "Pilvipalvelu"
+      currency_symbol: "€"
+      price: "189"
+      period: "/kk"
+      billing_info: "Laskutus kuukausittain. Peruutus milloin vain."
+      trial_info: "14 päivän ilmainen kokeilu"
+      features_title: "Kaikki mitä tarvitset:"
+      feature_unlimited_users: "<strong>Rajaton käyttäjämäärä</strong> - ei käyttäjäkohtaisia maksuja"
+      feature_widget: "Upotettava JavaScript-widget"
+      feature_custom_ai: "Mukautetut tekoälyohjeet ja käytännöt"
+      feature_domain: "Verkkotunnusten sallinta ja tietoturva"
+      feature_analytics: "Käyttöanalytiikan hallintapaneeli"
+      feature_sso: "SSO-käyttäjätunnistus"
+      feature_support: "Ensisijainen sähköpostituki"
+      feature_integrations: "Slack & Teams -integraatio"
+      cta_start_trial: "Aloita 14 päivän ilmainen kokeilu"
+      enterprise_text: "Tarvitsetko yritysominaisuuksia?"
+      enterprise_link: "Ota yhteyttä"
+
+    features:
+      title: "Kaikki mitä tarvitset"
+      subtitle: "Täydellinen alusta kehitystiimisi tekoälyparhaiden käytäntöjen omaksumiseen"
+      config_title: "Yrityksen konfigurointi"
+      config_description: "Mukauta chatbottia käytännöilläsi, koodausstandardeillasi, teknologiapinoillasi ja työkulttuurillasi."
+      widget_title: "Upotettava widget"
+      widget_description: "Lisää yksi script-tagi sisäiseen portaaliisi. Toimii kaikkialla missä JavaScript toimii."
+      domain_title: "Verkkotunnusten sallinta"
+      domain_description: "Hallitse tarkasti missä chatbottisi voidaan upottaa verkkotunnustason turvallisuudella."
+      analytics_title: "Käyttöanalytiikka"
+      analytics_description: "Seuraa viestejä, istuntoja ja käyttäjien sitoutumista. Näe miten tiimisi käyttää tekoälyä."
+      sso_title: "SSO-integraatio"
+      sso_description: "Välitä käyttäjätunnukset yksilöllisiin vastauksiin ja tiimikohtaiseen analytiikkaan."
+      multilang_title: "Monikielisyys"
+      multilang_description: "Tukee englantia, suomea, espanjaa ja saksaa suoraan käyttöön."
+
+    dashboard:
+      title: "Tehokas hallintapaneeli"
+      subtitle: "Kaikki mitä tarvitset tekoälyvalmennusalustan hallintaan yhdessä paikassa"
+      nav_dashboard: "Hallintapaneeli"
+      nav_team: "Tiimi"
+      nav_analytics: "Analytiikka"
+      nav_ai_trends: "Tekoälytrendit"
+      nav_settings: "Asetukset"
+      stat_active_users: "Aktiiviset käyttäjät"
+      stat_messages_today: "Viestit tänään"
+      stat_avg_score: "Keskiarvo"
+      stat_sessions: "Istunnot"
+      stat_this_week: "+12% tällä viikolla"
+      stat_vs_yesterday: "+8% eiliseen verrattuna"
+      stat_this_month: "+5 pistettä tässä kuussa"
+      usage_overview: "Käytön yleiskatsaus"
+      last_7_days: "Viimeiset 7 päivää"
+      recent_sessions: "Viimeisimmät istunnot"
+
+    team_performance:
+      title: "Seuraa tiimin edistymistä"
+      subtitle: "Näe miten kehitystiimisi omaksuu tekoälytyökalut. Tunnista mestarit, seuraa taitojen kehitystä ja ymmärrä missä tiimisi tarvitsee tukea."
+      feature_scores: "Yksilölliset tekoälytaitopisteet"
+      feature_gaps: "Tiimin laajuinen taitoaukkoanalyysi"
+      feature_topics: "Eniten kysytyt aiheet ja kysymykset"
+      feature_progress: "Edistymisen seuranta ajan mittaan"
+      section_title: "Tiimin suorituskyky"
+      ai_champion: "Tekoälymestari"
+      proficient: "Taitava"
+      developing: "Kehittyvä"
+      beginner: "Aloittelija"
+      skill_gaps: "Tiimin taitoaukot"
+      skill_prompt: "Kehotesuunnittelu"
+      skill_review: "Koodikatselmus tekoälyllä"
+      skill_testing: "Tekoälytestaustyökalut"
+
+    ai_trends:
+      title: "Pysy tekoälytrendien edellä"
+      subtitle: "Tekoälymaisema muuttuu viikoittain. Kokoamme olennaisimmat työkalut, tekniikat ja oppimisresurssit tiimisi teknologiapinon ja taitoaukkojen perusteella."
+      feature_curated: "Kuratoitu teknologiapinollesi"
+      feature_updates: "Viikoittaiset tekoälytyökalupäivitykset ja julkaisut"
+      feature_learning: "Oppimispolut taitoaukkojen perusteella"
+      feature_recommendations: "Toimintakelpoiset suositukset"
+      section_title: "Tekoälytrendit ja oppimiskeskus"
+      new_badge: "5 uutta"
+      hot_badge: "KUUMA"
+      new_tag: "UUSI"
+      guide_tag: "OPAS"
+      recommended_for: "Suositeltu: Kaikille kehitystiimeille"
+      lessons: "8 oppituntia"
+      duration: "~1,5 tuntia"
+      enable_team: "Ota käyttöön tiimillesi"
+
+    embed:
+      title: "Helppo upottaa"
+      subtitle: "Vain yksi rivi koodia"
+      comment: "<!-- Lisää sisäiseen portaaliisi -->"
+
+    security:
+      title: "Yritystason tietoturva"
+      subtitle: "Tietoturvasi on meille ensisijaisen tärkeää. Rakennettu turvatietoisille tiimeille."
+      encrypted_title: "Salattu levossa"
+      encrypted_description: "Kaikki data salattu AES-256:lla"
+      byok_title: "Tuo oma avaimesi"
+      byok_description: "Käytä omaa Anthropic API-avaintasi"
+      self_hosted_title: "Itsehostoitu vaihtoehto"
+      self_hosted_description: "Ota käyttöön omalla infrastruktuurillasi"
+      gdpr_title: "GDPR-yhteensopiva"
+      gdpr_description: "Täysi EU-tietosuojavaatimusten noudattaminen"
+      learn_more: "Lue lisää tietoturvastamme"
+
+    how_it_works:
+      badge: "Teknologiamme"
+      title: "Powered by Devometric (tm)"
+      subtitle: "Devometric käyttää räätälöityä <strong>RAG (Retrieval-Augmented Generation)</strong> -arkkitehtuuria yhdistettynä huippuluokan suuriin kielimalleihin tarjotakseen tarkkoja arviointeja ja yksilöllisiä suosituksia."
+      rag_title: "Räätälöity RAG-järjestelmä"
+      rag_description: "Reaaliaikainen uusimpien tekoälytyökalujen, tekniikoiden ja parhaiden käytäntöjen haku"
+      llm_title: "Suorituskykyinen LLM"
+      llm_description: "Powered by Claude, tarjoaa vivahteikkaan teknisen ymmärryksen"
+      prompts_title: "Suunnitellut kehotteet"
+      prompts_description: "Huolellisesti laaditut järjestelmäkehotteet johdonmukaisiin, laadukkaisiin arviointeihin"
+      cta: "Opi miten laskemme pisteet"
+      flow_title: "Arviointiprosessi"
+      step1_title: "Keskusteleva arviointi"
+      step1_description: "Luonnollinen dialogi arvioi tekoälytaitosi"
+      step2_title: "RAG + LLM analyysi"
+      step2_description: "Tekoäly arvioi vastaukset nykyisen tiedon perusteella"
+      step3_title: "Yksilöllinen pisteet ja suunnitelma"
+      step3_description: "Saat tekoälytaitopisteesi + toimenpiteet"
+      flow_note: "Arviointi kestää ~5 minuuttia"
+
+    cta:
+      title: "Valmis tekemään tiimistäsi tekoälynatiivi?"
+      subtitle: "Aloita ilmainen kokeilusi tänään ja näe ero."
+      button: "Kokeile ilmaiseksi"
+      trial_note: "14 päivän ilmainen kokeilu. Ei luottokorttia tarvita aloittamiseen."
+      newsletter_title: "Et ole vielä valmis? Saa tekoälyn käyttöönottovinkkejä sähköpostiisi."
+      email_placeholder: "Syötä sähköpostiosoitteesi"
+      subscribe: "Tilaa"
+
+  # Demo page
+  demo:
+    title: "Interaktiivinen demo"
+    meta_title: "Devometric Demo - Kokeile tekoälytaitojen arviointia"
+    meta_description: "Koe Devometricin tekoälytaitojen arviointi omakohtaisesti. Kokeile interaktiivista demoamme nähdäksesi miten mittaamme ja parannamme tiimisi tekoälyvalmiuksia."
+
+  # How It Works page
+  how_it_works_page:
+    meta_title: "Miten Devometric toimii - Tekoälytaitojen pisteytys ja suositukset selitettynä | UKK"
+    meta_description: "Opi miten Devometric laskee tekoälytaitopisteet käyttäen RAG-teknologiaa ja LLM:iä. Ymmärrä arviointimenetelmämme ja saa vastauksia usein kysyttyihin kysymyksiin."
+    cta:
+      title: "Valmis arvioimaan tiimisi tekoälytaidot?"
+      description: "Koe tekoälypohjainen arviointimme omakohtaisesti ilmaisella demolla."
+      demo_button: "Kokeile demoa"
+      trial_button: "Aloita ilmainen kokeilu"
+      trial_note: "14 päivän ilmainen kokeilu. Ei luottokorttia tarvita."
+
+  # Security page
+  security_page:
+    meta_title: "Tietoturva - Devometric"
+    meta_description: "Tutustu Devometricin yritystason tietoturvaominaisuuksiin mukaan lukien salaus, GDPR-yhteensopivuus ja itsehostatut vaihtoehdot."
+
+  # About page
+  about:
+    meta_title: "Tietoa meistä - Devometric"
+    meta_description: "Tutustu Risto Holappaan, Devometricin ja Devometric:n perustajaan, jolla on yli 10 vuoden kokemus modernista ohjelmistokehityksestä."
+    badge: "Tietoa meistä"
+    title: "Tapaa perustaja"
+    subtitle: "Rakennamme työkaluja, jotka auttavat kehitystiimejä menestymään tekoälyaikakaudella."
+    founder:
+      role: "Perustaja & CTO"
+      bio_1: "Risto Holappa on ohjelmistokehittäjä ja yrittäjä, jolla on yli 10 vuoden kokemus modernista ohjelmistokehityksestä. Kahden yrityksen teknologiajohtajana hän on johtanut skaalautuvien verkkosovellusten, pilvi-infrastruktuurin ja tekoälypohjaisten tuotteiden kehitystä."
+      bio_2: "Hänen intohimonsa on auttaa kehitystiimejä omaksumaan tekoälytyökaluja tehokkaasti ja tulemaan tuottavammiksi. Tämä johti Devometricin ja sitä ohjaavan Devometric -teknologian luomiseen."
+      bio_3: "Suomessa asuva Risto yhdistää syvän teknisen osaamisen käytännön ymmärrykseen siitä, mitä kehitystiimit tarvitsevat menestyäkseen nykypäivän nopeasti kehittyvässä teknologiamaisemassa."
+    companies:
+      title: "Yritykset"
+      viher:
+        tagline: "IT-konsultointi ja -palvelut"
+        description: "Viher IT tarjoaa IT-konsultointia ja ohjelmistokehityspalveluita, erikoistuen moderneihin verkkoteknologioihin, pilviratkaisuihin ja tekoälyintegraatioon."
+      reipas:
+        tagline: "Liikkeenjohdon konsultointi"
+        description: "Reipas Consulting tarjoaa liikkeenjohdon ja teknologian konsultointipalveluita, auttaen yrityksiä optimoimaan toimintojaan ja digitaalisia strategioitaan."
+    products:
+      title: "Tuotteet ja brändit"
+      devometric:
+        description: "Tekoälytaitojen arviointi- ja valmennusalusta kehitystiimeille. Mittaa, seuraa ja paranna tiimisi tekoälyvalmiuksia."
+      devometric_ai:
+        description: "Patentoitu RAG-pohjainen tekoälyteknologia, joka ohjaa Devometricin älykkäitä arviointeja ja yksilöllisiä suosituksia."
+        note: "Ohjaa Devometricia"
+      learn_more: "Lue lisää"
+    contact:
+      title: "Otetaan yhteyttä"
+      subtitle: "Kiinnostaako Devometric tai yhteistyö?"
+      cta_demo: "Varaa demo"
+      cta_email: "Lähetä sähköposti"
+
+  # Book Demo page
+  book_demo:
+    meta_title: "Varaa demo - Devometric"
+    meta_description: "Varaa henkilökohtainen demo Devometricista. Katso miten tekoälytaitojen arviointialustamme voi auttaa kehitystiimiäsi."
+    badge: "Aloita"
+    title: "Varaa demo"
+    subtitle: "Varaa henkilökohtainen esittely Devometricista ja katso miten se voi auttaa tiimiäsi tulemaan tekoälynatiiviksi."
+    form:
+      name_label: "Nimesi"
+      name_placeholder: "Matti Meikäläinen"
+      email_label: "Työsähköposti"
+      email_placeholder: "matti@yritys.fi"
+      company_label: "Yritys"
+      company_placeholder: "Yritys Oy"
+      team_size_label: "Tiimin koko"
+      team_size_placeholder: "Valitse tiimin koko"
+      message_label: "Muuta kerrottavaa?"
+      message_placeholder: "Kerro tiimisi tekoälyn käyttöönoton tavoitteista..."
+      submit: "Pyydä demo"
+      privacy_note: "Vastaamme 24 tunnin sisällä."
+    alternative: "Haluatko mieluummin sähköpostin? Ota yhteyttä suoraan"

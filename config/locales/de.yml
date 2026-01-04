@@ -1,0 +1,263 @@
+de:
+  languages:
+    en: "English"
+    fi: "Suomi"
+    sv: "Svenska"
+    es: "Español"
+    de: "Deutsch"
+
+  meta:
+    site_name: "Devometric"
+    default_title: "Devometric - KI-Kompetenzanalyse und Coaching für Entwicklungsteams"
+    default_description: "Messen und verbessern Sie die KI-Fähigkeiten Ihres Entwicklungsteams mit personalisierten Bewertungen, Fortschrittsverfolgung und Coaching."
+    keywords: "KI-Fähigkeiten, Entwicklungsteam, KI-Bewertung, KI-Coaching, Entwicklerproduktivität, KI-Adoption"
+
+  header:
+    nav:
+      demo: "Demo"
+      how_it_works: "Wie es funktioniert"
+      security: "Sicherheit"
+
+  footer:
+    tagline: "KI-Kompetenzplattform für Entwicklungsteams"
+    on_waitlist: "auf der Warteliste"
+    contact: "Kontakt"
+    privacy: "Datenschutz"
+    terms: "AGB"
+    built_by: "Erstellt von"
+    other_projects: "Andere Projekte:"
+    open_source: "Open Source"
+    about: "Über uns"
+    brands: "Marken"
+    company_info:
+      owned_by: "Devometric & Devometric gehören zu"
+      industry: "IT-Beratung & Dienstleistungen"
+      business_id: "Handelsregisternummer"
+
+  home:
+    hero:
+      title_line1: "Messen und verbessern"
+      title_line2: "die KI-Fähigkeiten Ihres Teams"
+      subtitle: "Eine Plattform, die die KI-Fähigkeiten Ihres Entwicklungsteams bewertet, Fortschritte verfolgt und personalisiertes Coaching für eine schnellere KI-Adoption bietet."
+      cta_try_free: "Kostenlos testen"
+      cta_demo: "KI-Kompetenztest machen"
+      cta_book_demo: "Demo buchen"
+      feature_scoring: "KI-Reifebewertung"
+      feature_tracking: "Team-Fortschrittsverfolgung"
+      feature_coaching: "Personalisiertes Coaching"
+
+    demo_preview:
+      title: "Erleben Sie es in Aktion"
+      subtitle: "Machen Sie eine interaktive Tour durch die Plattform"
+
+    pricing:
+      title: "Einfache, transparente Preisgestaltung"
+      subtitle: "Ein Festpreis für Ihr gesamtes Team. Keine Kosten pro Benutzer."
+      plan_name: "Team-Plan"
+      cloud_version: "Cloud-Version"
+      currency_symbol: "€"
+      price: "189"
+      period: "/Monat"
+      billing_info: "Monatliche Abrechnung. Jederzeit kündbar."
+      trial_info: "14 Tage kostenlose Testphase inklusive"
+      features_title: "Alles was Sie brauchen:"
+      feature_unlimited_users: "<strong>Unbegrenzte Benutzer</strong> - keine Pro-Benutzer-Preise"
+      feature_widget: "Einbettbares JavaScript-Widget"
+      feature_custom_ai: "Benutzerdefinierte KI-Anweisungen und Richtlinien"
+      feature_domain: "Domain-Whitelist und Sicherheit"
+      feature_analytics: "Nutzungsanalyse-Dashboard"
+      feature_sso: "SSO-Benutzeridentifikation"
+      feature_support: "Prioritärer E-Mail-Support"
+      feature_integrations: "Slack & Teams Integration"
+      cta_start_trial: "14-tägige kostenlose Testphase starten"
+      enterprise_text: "Benötigen Sie Enterprise-Funktionen?"
+      enterprise_link: "Kontaktieren Sie uns"
+
+    features:
+      title: "Alles was Sie brauchen"
+      subtitle: "Eine vollständige Plattform, um Ihrem Entwicklungsteam bei der Einführung von KI-Best Practices zu helfen"
+      config_title: "Unternehmenskonfiguration"
+      config_description: "Passen Sie den Chatbot mit Ihren Richtlinien, Coding-Standards, Tech-Stack und Arbeitskultur an."
+      widget_title: "Einbettbares Widget"
+      widget_description: "Fügen Sie ein einziges Script-Tag zu Ihrem internen Portal hinzu. Funktioniert überall, wo JavaScript läuft."
+      domain_title: "Domain-Whitelist"
+      domain_description: "Kontrollieren Sie genau, wo Ihr Chatbot eingebettet werden kann, mit Sicherheit auf Domain-Ebene."
+      analytics_title: "Nutzungsanalyse"
+      analytics_description: "Verfolgen Sie Nachrichten, Sitzungen und Benutzerengagement. Sehen Sie, wie Ihr Team KI nutzt."
+      sso_title: "SSO-Integration"
+      sso_description: "Übergeben Sie Benutzer-IDs für personalisierte Antworten und Team-Analysen."
+      multilang_title: "Mehrsprachig"
+      multilang_description: "Unterstützt Englisch, Finnisch, Spanisch und Deutsch von Haus aus."
+
+    dashboard:
+      title: "Leistungsstarkes Admin-Dashboard"
+      subtitle: "Alles, was Sie zur Verwaltung Ihrer KI-Coaching-Plattform an einem Ort benötigen"
+      nav_dashboard: "Dashboard"
+      nav_team: "Team"
+      nav_analytics: "Analyse"
+      nav_ai_trends: "KI-Trends"
+      nav_settings: "Einstellungen"
+      stat_active_users: "Aktive Benutzer"
+      stat_messages_today: "Nachrichten heute"
+      stat_avg_score: "Durchschn. KI-Score"
+      stat_sessions: "Sitzungen"
+      stat_this_week: "+12% diese Woche"
+      stat_vs_yesterday: "+8% vs. gestern"
+      stat_this_month: "+5 Pkt. diesen Monat"
+      usage_overview: "Nutzungsübersicht"
+      last_7_days: "Letzte 7 Tage"
+      recent_sessions: "Aktuelle Sitzungen"
+
+    team_performance:
+      title: "Team-Fortschritt verfolgen"
+      subtitle: "Sehen Sie, wie Ihr Entwicklungsteam KI-Tools annimmt. Identifizieren Sie Champions, verfolgen Sie die Kompetenzentwicklung und verstehen Sie, wo Ihr Team Unterstützung braucht."
+      feature_scores: "Individuelle KI-Reifescores"
+      feature_gaps: "Teamweite Kompetenzlückenanalyse"
+      feature_topics: "Meistgestellte Themen und Fragen"
+      feature_progress: "Fortschrittsverfolgung über Zeit"
+      section_title: "Team-Performance"
+      ai_champion: "KI-Champion"
+      proficient: "Kompetent"
+      developing: "In Entwicklung"
+      beginner: "Anfänger"
+      skill_gaps: "Team-Kompetenzlücken"
+      skill_prompt: "Prompt Engineering"
+      skill_review: "Code-Review mit KI"
+      skill_testing: "KI-Testtools"
+
+    ai_trends:
+      title: "KI-Trends voraus sein"
+      subtitle: "Die KI-Landschaft ändert sich wöchentlich. Wir kuratieren die relevantesten Tools, Techniken und Lernressourcen basierend auf dem Tech-Stack und den Kompetenzlücken Ihres Teams."
+      feature_curated: "Kuratiert für Ihren Tech-Stack"
+      feature_updates: "Wöchentliche KI-Tool-Updates und Releases"
+      feature_learning: "Lernpfade basierend auf Kompetenzlücken"
+      feature_recommendations: "Umsetzbare Empfehlungen"
+      section_title: "KI-Trends & Lernzentrum"
+      new_badge: "5 neu"
+      hot_badge: "HEISS"
+      new_tag: "NEU"
+      guide_tag: "GUIDE"
+      recommended_for: "Empfohlen für: Alle Entwicklungsteams"
+      lessons: "8 Lektionen"
+      duration: "~1,5 Stunden"
+      enable_team: "Für Ihr Team aktivieren"
+
+    embed:
+      title: "Einfach einzubetten"
+      subtitle: "Nur eine Zeile Code"
+      comment: "<!-- Zu Ihrem internen Portal hinzufügen -->"
+
+    security:
+      title: "Enterprise-Sicherheit"
+      subtitle: "Ihre Datensicherheit hat höchste Priorität. Entwickelt für sicherheitsbewusste Teams."
+      encrypted_title: "Verschlüsselt im Ruhezustand"
+      encrypted_description: "Alle Daten mit AES-256 verschlüsselt"
+      byok_title: "Eigenen Schlüssel mitbringen"
+      byok_description: "Verwenden Sie Ihren eigenen Anthropic API-Schlüssel"
+      self_hosted_title: "Self-Hosted Option"
+      self_hosted_description: "Auf Ihrer eigenen Infrastruktur bereitstellen"
+      gdpr_title: "DSGVO-konform"
+      gdpr_description: "Vollständige EU-Datenschutzkonformität"
+      learn_more: "Mehr über unsere Sicherheit erfahren"
+
+    how_it_works:
+      badge: "Unsere Technologie"
+      title: "Powered by Devometric (tm)"
+      subtitle: "Devometric verwendet eine benutzerdefinierte <strong>RAG (Retrieval-Augmented Generation)</strong>-Architektur kombiniert mit modernsten Large Language Models, um präzise Bewertungen und personalisierte Empfehlungen zu liefern."
+      rag_title: "Benutzerdefiniertes RAG-System"
+      rag_description: "Echtzeit-Abruf der neuesten KI-Tools, Techniken und Best Practices"
+      llm_title: "Hochleistungs-LLM"
+      llm_description: "Powered by Claude, liefert nuanciertes technisches Verständnis"
+      prompts_title: "Engineered Prompts"
+      prompts_description: "Sorgfältig gestaltete System-Prompts für konsistente, qualitative Bewertungen"
+      cta: "Erfahren Sie, wie wir Scores berechnen"
+      flow_title: "Der Bewertungsablauf"
+      step1_title: "Konversationsbasierte Bewertung"
+      step1_description: "Natürlicher Dialog bewertet Ihre KI-Fähigkeiten"
+      step2_title: "RAG + LLM Analyse"
+      step2_description: "KI wertet Antworten mit aktuellem Wissen aus"
+      step3_title: "Personalisierter Score & Plan"
+      step3_description: "Erhalten Sie Ihren KI-Reifescore + Aktionen"
+      flow_note: "Die Bewertung dauert ~5 Minuten"
+
+    cta:
+      title: "Bereit, Ihr Team KI-nativ zu machen?"
+      subtitle: "Starten Sie noch heute Ihre kostenlose Testphase und erleben Sie den Unterschied."
+      button: "Kostenlos testen"
+      trial_note: "14 Tage kostenlose Testphase. Keine Kreditkarte zum Starten erforderlich."
+      newsletter_title: "Noch nicht bereit? Erhalten Sie KI-Adoptionstipps in Ihrem Postfach."
+      email_placeholder: "E-Mail eingeben"
+      subscribe: "Abonnieren"
+
+  demo:
+    title: "Interaktive Demo"
+    meta_title: "Devometric Demo - KI-Kompetenzbewertung ausprobieren"
+    meta_description: "Erleben Sie Devometrics KI-Kompetenzbewertung aus erster Hand. Machen Sie unsere interaktive Demo, um zu sehen, wie wir die KI-Fähigkeiten Ihres Teams messen und verbessern."
+
+  how_it_works_page:
+    meta_title: "Wie Devometric funktioniert - KI-Kompetenzscoring und Empfehlungen erklärt | FAQ"
+    meta_description: "Erfahren Sie, wie Devometric KI-Reifescores mit RAG-Technologie und LLMs berechnet. Verstehen Sie unsere Bewertungsmethodik und erhalten Sie Antworten auf häufig gestellte Fragen."
+    cta:
+      title: "Bereit, die KI-Fähigkeiten Ihres Teams zu bewerten?"
+      description: "Erleben Sie unsere KI-gestützte Bewertung aus erster Hand mit einer kostenlosen Demo."
+      demo_button: "Demo ausprobieren"
+      trial_button: "Kostenlose Testphase starten"
+      trial_note: "14 Tage kostenlose Testphase. Keine Kreditkarte erforderlich."
+
+  security_page:
+    meta_title: "Sicherheit - Devometric"
+    meta_description: "Erfahren Sie mehr über Devometrics Enterprise-Sicherheitsfunktionen einschließlich Verschlüsselung, DSGVO-Konformität und Self-Hosted-Optionen."
+
+  about:
+    meta_title: "Über uns - Devometric"
+    meta_description: "Lernen Sie Risto Holappa kennen, den Gründer von Devometric und Devometric, mit über 10 Jahren Erfahrung in moderner Softwareentwicklung."
+    badge: "Über uns"
+    title: "Lernen Sie den Gründer kennen"
+    subtitle: "Wir bauen Werkzeuge, die Entwicklungsteams helfen, in der KI-Ära erfolgreich zu sein."
+    founder:
+      role: "Gründer & CTO"
+      bio_1: "Risto Holappa ist Softwareentwickler und Unternehmer mit über 10 Jahren Erfahrung in moderner Softwareentwicklung. Als CTO bei zwei Unternehmen hat er die Entwicklung skalierbarer Webanwendungen, Cloud-Infrastruktur und KI-gestützter Produkte geleitet."
+      bio_2: "Seine Leidenschaft ist es, Entwicklungsteams dabei zu helfen, KI-Tools effektiv einzusetzen und produktiver zu werden. Dies führte zur Entwicklung von Devometric und der Devometric-Technologie, die es antreibt."
+      bio_3: "Mit Sitz in Finnland verbindet Risto tiefe technische Expertise mit einem praktischen Verständnis dafür, was Entwicklungsteams brauchen, um in der sich schnell entwickelnden Technologielandschaft von heute erfolgreich zu sein."
+    companies:
+      title: "Unternehmen"
+      viher:
+        tagline: "IT-Beratung & Dienstleistungen"
+        description: "Viher IT bietet IT-Beratung und Softwareentwicklungsdienstleistungen, spezialisiert auf moderne Webtechnologien, Cloud-Lösungen und KI-Integration."
+      reipas:
+        tagline: "Unternehmensberatung"
+        description: "Reipas Consulting bietet Unternehmens- und Technologieberatung und hilft Unternehmen, ihre Abläufe und digitalen Strategien zu optimieren."
+    products:
+      title: "Produkte & Marken"
+      devometric:
+        description: "KI-Kompetenzbewertungs- und Coaching-Plattform für Entwicklungsteams. Messen, verfolgen und verbessern Sie die KI-Fähigkeiten Ihres Teams."
+      devometric_ai:
+        description: "Die proprietäre RAG-basierte KI-Technologie, die Devometrics intelligente Bewertungen und personalisierte Empfehlungen antreibt."
+        note: "Treibt Devometric an"
+      learn_more: "Mehr erfahren"
+    contact:
+      title: "Lassen Sie uns verbinden"
+      subtitle: "Interessiert, mehr über Devometric zu erfahren oder eine Partnerschaft zu besprechen?"
+      cta_demo: "Demo buchen"
+      cta_email: "E-Mail senden"
+
+  book_demo:
+    meta_title: "Demo buchen - Devometric"
+    meta_description: "Vereinbaren Sie eine persönliche Demo von Devometric. Erfahren Sie, wie unsere KI-Kompetenzbewertungsplattform Ihrem Entwicklungsteam helfen kann."
+    badge: "Loslegen"
+    title: "Demo buchen"
+    subtitle: "Vereinbaren Sie eine persönliche Führung durch Devometric und erfahren Sie, wie es Ihrem Team helfen kann, KI-native zu werden."
+    form:
+      name_label: "Ihr Name"
+      name_placeholder: "Max Mustermann"
+      email_label: "Geschäftliche E-Mail"
+      email_placeholder: "max@firma.de"
+      company_label: "Unternehmen"
+      company_placeholder: "Firma GmbH"
+      team_size_label: "Teamgröße"
+      team_size_placeholder: "Teamgröße auswählen"
+      message_label: "Gibt es noch etwas, das wir wissen sollten?"
+      message_placeholder: "Erzählen Sie uns von den KI-Adoptionszielen Ihres Teams..."
+      submit: "Demo anfordern"
+      privacy_note: "Wir melden uns innerhalb von 24 Stunden."
+    alternative: "Bevorzugen Sie E-Mail? Kontaktieren Sie uns direkt unter"

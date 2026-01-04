@@ -1,0 +1,102 @@
+# Kamal deployment configuration for Devometric
+# Copy to deploy.yml and customize for your environment
+# Deploy with: kamal setup (first time) or kamal deploy
+
+service: devometric
+
+# Container image name (registry server is specified below)
+image: devometric
+
+# Deploy to these servers
+servers:
+  web:
+    hosts:
+      - YOUR_SERVER_IP
+    labels:
+      traefik.http.routers.devometric.rule: Host(`your-domain.com`) || Host(`www.your-domain.com`)
+      traefik.http.routers.devometric.tls: true
+      traefik.http.routers.devometric.tls.certresolver: letsencrypt
+
+# Traefik proxy for SSL termination
+proxy:
+  ssl: true
+  host: your-domain.com
+
+# Local registry on server (no authentication needed)
+registry:
+  server: YOUR_SERVER_IP:5000
+  username: unused
+  password:
+    - REGISTRY_PASSWORD
+
+# Environment variables
+env:
+  secret:
+    - RAILS_MASTER_KEY
+    - SECRET_KEY_BASE
+    - POSTGRES_PASSWORD
+    - ANTHROPIC_API_KEY
+    - SMTP_USERNAME
+    - SMTP_PASSWORD
+  clear:
+    RAILS_ENV: production
+    RAILS_LOG_TO_STDOUT: true
+    RAILS_SERVE_STATIC_FILES: true
+    SOLID_QUEUE_IN_PUMA: true
+    LLM_PROVIDER: anthropic
+    DB_HOST: devometric-db
+    REDIS_URL: redis://devometric-redis:6379/0
+    SMTP_ADDRESS: email-smtp.YOUR_REGION.amazonaws.com
+    SMTP_PORT: "587"
+    APP_HOST: your-domain.com
+
+# SSH configuration
+ssh:
+  user: ubuntu
+  keys:
+    - ~/.ssh/your-key.pem
+
+# Persistent storage
+volumes:
+  - "devometric_storage:/rails/storage"
+
+# Asset bridging for zero-downtime deploys
+asset_path: /rails/public/assets
+
+# Build configuration
+builder:
+  arch: amd64
+  remote: ssh://ubuntu@YOUR_SERVER_IP
+
+# Accessories (PostgreSQL and Redis on same server)
+accessories:
+  db:
+    image: postgres:16-alpine
+    host: YOUR_SERVER_IP
+    port: "127.0.0.1:5432:5432"
+    env:
+      clear:
+        POSTGRES_USER: devometric
+        POSTGRES_DB: devometric_production
+      secret:
+        - POSTGRES_PASSWORD
+    directories:
+      - data:/var/lib/postgresql/data
+    options:
+      health-cmd: "pg_isready -U devometric"
+      health-interval: 2s
+
+  redis:
+    image: redis:7-alpine
+    host: YOUR_SERVER_IP
+    port: "127.0.0.1:6379:6379"
+    cmd: redis-server --appendonly yes
+    directories:
+      - data:/data
+
+# Useful aliases
+aliases:
+  console: app exec --interactive --reuse "bin/rails console"
+  shell: app exec --interactive --reuse "bash"
+  logs: app logs -f
+  dbconsole: app exec --interactive --reuse "bin/rails dbconsole"

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Widget Test - Devometric Community Edition</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
+      min-height: 100vh;
+    }
+    h1 {
+      color: #10b981;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #94a3b8;
+      margin-bottom: 32px;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .card h2 {
+      color: #f1f5f9;
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 1.25rem;
+    }
+    pre {
+      background: #0f172a;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      border: 1px solid #334155;
+    }
+    code {
+      color: #10b981;
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 14px;
+    }
+    .instructions {
+      background: linear-gradient(135deg, #10b98115 0%, #10b98105 100%);
+      border: 1px solid #10b98130;
+    }
+    .instructions ol {
+      margin: 0;
+      padding-left: 24px;
+    }
+    .instructions li {
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .instructions code {
+      background: #0f172a;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+    .badge {
+      display: inline-block;
+      background: #10b981;
+      color: #0f172a;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #334155;
+      color: #64748b;
+      font-size: 14px;
+    }
+    .footer a {
+      color: #10b981;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .tip {
+      background: #fbbf2415;
+      border: 1px solid #fbbf2430;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #fbbf24;
+    }
+    .tip strong {
+      color: #fcd34d;
+    }
+  </style>
+</head>
+<body>
+  <span class="badge">Community Edition</span>
+  <h1>Devometric Widget Test</h1>
+  <p class="subtitle">Test and customize your AI assistant widget</p>
+
+  <div class="card instructions">
+    <h2>Quick Start</h2>
+    <ol>
+      <li>Make sure the Rails server is running: <code>bin/dev</code></li>
+      <li>Open the browser console (F12) to see debug logs</li>
+      <li>Click the chat button in the bottom-right corner</li>
+      <li>Try sending a message to test the AI response</li>
+    </ol>
+    <div class="tip">
+      <strong>Tip:</strong> Configure your LLM provider in <code>.env</code> file.
+      Supports Ollama (local), OpenAI, and Anthropic.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Embed Code</h2>
+    <p style="color: #94a3b8; margin-bottom: 16px;">Add this script to any page to embed the widget:</p>
+    <pre><code>&lt;script
+  src="http://localhost:3000/widget.js"
+  data-key="YOUR_EMBED_KEY"
+  data-position="bottom-right"
+&gt;&lt;/script&gt;</code></pre>
+  </div>
+
+  <div class="card">
+    <h2>Configuration Options</h2>
+    <pre><code>data-key       Your organization's embed key (required)
+data-position  Widget position: bottom-right, bottom-left
+data-theme     Color theme: auto, light, dark
+data-locale    Language: en, fi, sv, es, de</code></pre>
+  </div>
+
+  <div class="card">
+    <h2>Customize in Dashboard</h2>
+    <p style="color: #94a3b8; margin-bottom: 16px;">
+      Visit the admin dashboard to customize:
+    </p>
+    <ul style="color: #cbd5e1; line-height: 1.8; margin: 0; padding-left: 20px;">
+      <li>System prompt and AI behavior</li>
+      <li>Company policies and coding standards</li>
+      <li>Widget colors and branding</li>
+      <li>Welcome message and placeholder text</li>
+      <li>Allowed embed domains</li>
+    </ul>
+    <p style="margin-top: 16px;">
+      <a href="/admin" style="color: #10b981;">Open Dashboard →</a>
+    </p>
+  </div>
+
+  <div class="footer">
+    <p>
+      Devometric Community Edition ·
+      <a href="https://github.com/Devometric/devometric-platform">GitHub</a> ·
+      <a href="/docs/API_SPECIFICATION.md">API Docs</a>
+    </p>
+    <p style="margin-top: 8px;">MIT License · Contributions welcome!</p>
+  </div>
+
+  <!-- The widget script - replace with your embed key from db:seed output -->
+  <script src="/widget.js" data-key="demo"></script>
+</body>
+</html>

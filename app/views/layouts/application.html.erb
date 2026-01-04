@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>" class="h-full">
+  <head>
+    <meta charset="utf-8">
+    <title><%= content_for(:title) || t('meta.default_title') %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <% I18n.available_locales.each do |locale| %>
+      <link rel="alternate" hreflang="<%= locale %>" href="<%= hreflang_url(locale) %>">
+    <% end %>
+    <link rel="alternate" hreflang="x-default" href="<%= hreflang_url(:en) %>">
+
+    <meta name="description" content="<%= content_for(:meta_description) || t('meta.default_description') %>">
+    <meta name="keywords" content="<%= t('meta.keywords') %>">
+    <meta name="author" content="Risto Holappa, Viher IT">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="<%= content_for(:canonical_url) || "https://devometric.com#{request.path}" %>">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= content_for(:og_url) || "https://devometric.com#{request.path}" %>">
+    <meta property="og:title" content="<%= content_for(:og_title) || t('meta.default_title') %>">
+    <meta property="og:description" content="<%= content_for(:og_description) || t('meta.default_description') %>">
+    <meta property="og:image" content="<%= content_for(:og_image) || "https://devometric.com/og-image.png" %>">
+    <meta property="og:site_name" content="<%= t('meta.site_name') %>">
+    <meta property="og:locale" content="<%= locale_to_og_locale(I18n.locale) %>">
+    <% (I18n.available_locales - [I18n.locale]).each do |alt_locale| %>
+      <meta property="og:locale:alternate" content="<%= locale_to_og_locale(alt_locale) %>">
+    <% end %>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="<%= content_for(:twitter_url) || "https://devometric.com#{request.path}" %>">
+    <meta name="twitter:title" content="<%= content_for(:twitter_title) || t('meta.default_title') %>">
+    <meta name="twitter:description" content="<%= content_for(:twitter_description) || t('meta.default_description') %>">
+    <meta name="twitter:image" content="<%= content_for(:twitter_image) || "https://devometric.com/og-image.png" %>">
+
+    <meta name="theme-color" content="#10b981">
+    <meta name="geo.region" content="FI">
+    <meta name="geo.placename" content="Finland">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Devometric",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "AI skills assessment and coaching platform for engineering teams. Measure and improve your team's AI capabilities with personalized training and progress tracking.",
+      "url": "https://devometric.com",
+      "author": {
+        "@type": "Person",
+        "name": "Risto Holappa",
+        "url": "https://www.linkedin.com/in/rholappa/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Viher IT",
+        "url": "https://viher.it"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "189",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2026-12-31"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "50"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Devometric",
+      "url": "https://devometric.com",
+      "logo": "https://devometric.com/logo.png",
+      "description": "The AI Adoption Coach for Engineering Teams",
+      "founder": {
+        "@type": "Person",
+        "name": "Risto Holappa",
+        "url": "https://www.linkedin.com/in/rholappa/"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "risto@viher.it",
+        "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/rholappa/"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Devometric",
+      "url": "https://devometric.com",
+      "description": "AI skills assessment and coaching platform for engineering teams",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://devometric.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="h-full bg-gray-900">
+    <% if content_for?(:full_page) %>
+      <%= yield %>
+    <% else %>
+      <main class="min-h-full">
+        <% if notice.present? || alert.present? %>
+          <div class="fixed top-4 right-4 z-50 space-y-2">
+            <% if notice.present? %>
+              <div class="bg-emerald-900/90 border border-emerald-700 text-emerald-200 px-4 py-3 rounded-lg shadow-lg max-w-sm" data-controller="flash" data-flash-target="message">
+                <%= notice %>
+              </div>
+            <% end %>
+            <% if alert.present? %>
+              <div class="bg-red-900/90 border border-red-700 text-red-200 px-4 py-3 rounded-lg shadow-lg max-w-sm" data-controller="flash" data-flash-target="message">
+                <%= alert %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+        <%= yield %>
+      </main>
+    <% end %>
+  </body>
+</html>

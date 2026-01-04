@@ -1,0 +1,270 @@
+en:
+  # Language names (native)
+  languages:
+    en: "English"
+    fi: "Suomi"
+    sv: "Svenska"
+    es: "Español"
+    de: "Deutsch"
+
+  # Meta/SEO
+  meta:
+    site_name: "Devometric"
+    default_title: "Devometric - AI Skills Assessment & Coaching for Engineering Teams"
+    default_description: "Measure and improve your engineering team's AI skills with personalized assessments, progress tracking, and coaching."
+    keywords: "AI skills, engineering team, AI assessment, AI coaching, developer productivity, AI adoption"
+
+  # Header navigation
+  header:
+    nav:
+      demo: "Demo"
+      how_it_works: "How It Works"
+      security: "Security"
+
+  # Footer
+  footer:
+    tagline: "AI Skills Platform for Engineering Teams"
+    on_waitlist: "on the waitlist"
+    contact: "Contact"
+    privacy: "Privacy"
+    terms: "Terms"
+    built_by: "Built by"
+    other_projects: "Other projects:"
+    open_source: "Open Source"
+    about: "About"
+    brands: "Brands"
+    company_info:
+      owned_by: "Devometric is owned by"
+      industry: "IT Consulting & Services"
+      business_id: "Business ID"
+
+  # Homepage
+  home:
+    hero:
+      title_line1: "Measure and improve"
+      title_line2: "your team's AI skills"
+      subtitle: "A platform that assesses your engineering team's AI capabilities, tracks progress, and delivers personalized coaching to accelerate AI adoption."
+      cta_try_free: "Try for Free"
+      cta_demo: "Take the AI Skills Assessment"
+      cta_book_demo: "Book a Demo"
+      feature_scoring: "AI Nativeness Scoring"
+      feature_tracking: "Team Progress Tracking"
+      feature_coaching: "Personalized Coaching"
+
+    demo_preview:
+      title: "See it in action"
+      subtitle: "Take an interactive tour of the platform"
+
+    pricing:
+      title: "Simple, transparent pricing"
+      subtitle: "One flat rate for your entire team. No per-seat fees."
+      plan_name: "Team Plan"
+      cloud_version: "Cloud Version"
+      currency_symbol: "€"
+      price: "189"
+      period: "/month"
+      billing_info: "Billed monthly. Cancel anytime."
+      trial_info: "14-day free trial included"
+      features_title: "Everything you need:"
+      feature_unlimited_users: "<strong>Unlimited users</strong> - no per-seat pricing"
+      feature_widget: "Embeddable JavaScript widget"
+      feature_custom_ai: "Custom AI instructions & policies"
+      feature_domain: "Domain whitelisting & security"
+      feature_analytics: "Usage analytics dashboard"
+      feature_sso: "SSO user identification"
+      feature_support: "Priority email support"
+      feature_integrations: "Slack & Teams integration"
+      cta_start_trial: "Start 14-Day Free Trial"
+      enterprise_text: "Need enterprise features?"
+      enterprise_link: "Contact us"
+
+    features:
+      title: "Everything you need"
+      subtitle: "A complete platform to help your engineering team adopt AI best practices"
+      config_title: "Company Configuration"
+      config_description: "Customize the chatbot with your policies, coding standards, tech stack, and work culture."
+      widget_title: "Embeddable Widget"
+      widget_description: "Add a single script tag to your internal portal. Works everywhere JavaScript runs."
+      domain_title: "Domain Whitelisting"
+      domain_description: "Control exactly where your chatbot can be embedded with domain-level security."
+      analytics_title: "Usage Analytics"
+      analytics_description: "Track messages, sessions, and user engagement. See how your team uses AI."
+      sso_title: "SSO Integration"
+      sso_description: "Pass user IDs for personalized responses and team-level analytics."
+      multilang_title: "Multi-language"
+      multilang_description: "Supports English, Finnish, Spanish, and German out of the box."
+
+    dashboard:
+      title: "Powerful Admin Dashboard"
+      subtitle: "Everything you need to manage your AI coaching platform in one place"
+      nav_dashboard: "Dashboard"
+      nav_team: "Team"
+      nav_analytics: "Analytics"
+      nav_ai_trends: "AI Trends"
+      nav_settings: "Settings"
+      stat_active_users: "Active Users"
+      stat_messages_today: "Messages Today"
+      stat_avg_score: "Avg AI Score"
+      stat_sessions: "Sessions"
+      stat_this_week: "+12% this week"
+      stat_vs_yesterday: "+8% vs yesterday"
+      stat_this_month: "+5 pts this month"
+      usage_overview: "Usage Overview"
+      last_7_days: "Last 7 days"
+      recent_sessions: "Recent Sessions"
+
+    team_performance:
+      title: "Track Team Progress"
+      subtitle: "See how your engineering team adopts AI tools. Identify champions, track skill progression, and understand where your team needs support."
+      feature_scores: "Individual AI nativeness scores"
+      feature_gaps: "Team-wide skill gap analysis"
+      feature_topics: "Most asked topics & questions"
+      feature_progress: "Progress tracking over time"
+      section_title: "Team Performance"
+      ai_champion: "AI Champion"
+      proficient: "Proficient"
+      developing: "Developing"
+      beginner: "Beginner"
+      skill_gaps: "Team Skill Gaps"
+      skill_prompt: "Prompt Engineering"
+      skill_review: "Code Review with AI"
+      skill_testing: "AI Testing Tools"
+
+    ai_trends:
+      title: "Stay Ahead of AI Trends"
+      subtitle: "The AI landscape changes weekly. We curate the most relevant tools, techniques, and learning resources based on your team's tech stack and skill gaps."
+      feature_curated: "Curated for your tech stack"
+      feature_updates: "Weekly AI tool updates & releases"
+      feature_learning: "Learning paths based on skill gaps"
+      feature_recommendations: "Actionable recommendations"
+      section_title: "AI Trends & Learning Hub"
+      new_badge: "5 new"
+      hot_badge: "HOT"
+      new_tag: "NEW"
+      guide_tag: "GUIDE"
+      recommended_for: "Recommended for: All Engineering Teams"
+      lessons: "8 lessons"
+      duration: "~1.5 hours"
+      enable_team: "Enable for your team"
+
+    embed:
+      title: "Easy to embed"
+      subtitle: "Just one line of code"
+      comment: "<!-- Add to your internal portal -->"
+
+    security:
+      title: "Enterprise-grade security"
+      subtitle: "Your data security is our top priority. Built for security-conscious teams."
+      encrypted_title: "Encrypted at Rest"
+      encrypted_description: "All data encrypted with AES-256"
+      byok_title: "Bring Your Own Key"
+      byok_description: "Use your own Anthropic API key"
+      self_hosted_title: "Self-Hosted Option"
+      self_hosted_description: "Deploy on your own infrastructure"
+      gdpr_title: "GDPR Compliant"
+      gdpr_description: "Full EU data protection compliance"
+      learn_more: "Learn more about our security"
+
+    how_it_works:
+      badge: "Our Technology"
+      title: "Powered by Advanced AI"
+      subtitle: "Devometric uses a custom <strong>RAG (Retrieval-Augmented Generation)</strong> architecture combined with state-of-the-art Large Language Models to deliver accurate assessments and personalized recommendations."
+      rag_title: "Custom RAG System"
+      rag_description: "Real-time retrieval of the latest AI tools, techniques, and best practices"
+      llm_title: "High-Performance LLM"
+      llm_description: "Powered by Claude, delivering nuanced technical understanding"
+      prompts_title: "Engineered Prompts"
+      prompts_description: "Carefully crafted system prompts for consistent, quality assessments"
+      cta: "Learn how we calculate scores"
+      flow_title: "The Assessment Flow"
+      step1_title: "Conversational Assessment"
+      step1_description: "Natural dialogue evaluates your AI skills"
+      step2_title: "RAG + LLM Analysis"
+      step2_description: "AI evaluates responses with current knowledge"
+      step3_title: "Personalized Score & Plan"
+      step3_description: "Get your AI Nativeness Score + action items"
+      flow_note: "Assessment takes ~5 minutes"
+
+    cta:
+      title: "Ready to make your team AI-native?"
+      subtitle: "Start your free trial today and see the difference."
+      button: "Try for Free"
+      trial_note: "14-day free trial. No credit card required to start."
+      newsletter_title: "Not ready yet? Get AI adoption tips in your inbox."
+      email_placeholder: "Enter your email"
+      subscribe: "Subscribe"
+
+  # Demo page
+  demo:
+    title: "Interactive Demo"
+    meta_title: "Devometric Demo - Try the AI Skills Assessment"
+    meta_description: "Experience Devometric's AI skills assessment firsthand. Take our interactive demo to see how we measure and improve your team's AI capabilities."
+
+  # How It Works page
+  how_it_works_page:
+    meta_title: "How Devometric Works - AI Skills Scoring & Recommendations Explained | FAQ"
+    meta_description: "Learn how Devometric calculates AI Nativeness Scores using RAG technology and LLMs. Understand our assessment methodology and get answers to frequently asked questions."
+    cta:
+      title: "Ready to assess your team's AI skills?"
+      description: "Experience our AI-powered assessment firsthand with a free demo."
+      demo_button: "Try the Demo"
+      trial_button: "Start Free Trial"
+      trial_note: "14-day free trial. No credit card required."
+
+  # Security page
+  security_page:
+    meta_title: "Security - Devometric"
+    meta_description: "Learn about Devometric's enterprise-grade security features including encryption, GDPR compliance, and self-hosting options."
+
+  # About page
+  about:
+    meta_title: "About Us - Devometric"
+    meta_description: "Learn about the team behind Devometric, with over 10 years of modern software development experience."
+    badge: "About Us"
+    title: "Meet the Team"
+    subtitle: "Building tools to help engineering teams thrive in the AI era."
+    founder:
+      role: "Founder & CTO"
+      bio_1: "The Devometric team brings over 10 years of experience in modern software development. We have led the development of scalable web applications, cloud infrastructure, and AI-powered products."
+      bio_2: "Our passion lies in helping development teams adopt AI tools effectively and become more productive. This led to the creation of Devometric."
+      bio_3: "We combine deep technical expertise with a practical understanding of what engineering teams need to succeed in today's rapidly evolving tech landscape."
+    companies:
+      title: "Companies"
+      viher:
+        tagline: "IT Consulting & Services"
+        description: "Viher IT provides IT consulting and software development services, specializing in modern web technologies, cloud solutions, and AI integration."
+      reipas:
+        tagline: "Business Consulting"
+        description: "Reipas Consulting offers business and technology consulting services, helping companies optimize their operations and digital strategies."
+    products:
+      title: "Products & Brands"
+      devometric:
+        description: "AI skills assessment and coaching platform for engineering teams. Measure, track, and improve your team's AI capabilities."
+      learn_more: "Learn more"
+    contact:
+      title: "Let's Connect"
+      subtitle: "Interested in learning more about Devometric or discussing a partnership?"
+      cta_demo: "Book a Demo"
+      cta_email: "Send an Email"
+
+  # Book Demo page
+  book_demo:
+    meta_title: "Book a Demo - Devometric"
+    meta_description: "Schedule a personalized demo of Devometric. See how our AI skills assessment platform can help your engineering team."
+    badge: "Get Started"
+    title: "Book a Demo"
+    subtitle: "Schedule a personalized walkthrough of Devometric and see how it can help your team become AI-native."
+    form:
+      name_label: "Your Name"
+      name_placeholder: "John Smith"
+      email_label: "Work Email"
+      email_placeholder: "john@company.com"
+      company_label: "Company"
+      company_placeholder: "Acme Inc."
+      team_size_label: "Team Size"
+      team_size_placeholder: "Select team size"
+      message_label: "Anything else we should know?"
+      message_placeholder: "Tell us about your team's AI adoption goals..."
+      submit: "Request Demo"
+      privacy_note: "We'll get back to you within 24 hours."
+    alternative: "Prefer email? Reach out directly at"

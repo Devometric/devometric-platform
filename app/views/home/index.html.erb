@@ -1,0 +1,853 @@
+<div class="min-h-screen text-white">
+  <%= render 'shared/header' %>
+
+  <div class="bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+      <div class="flex justify-center mb-8">
+        <a href="<%= root_path %>">
+          <img src="/logo.png" alt="Devometric" class="h-20 sm:h-28 lg:h-32 w-auto">
+        </a>
+      </div>
+
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+          <span class="block text-white"><%= t('home.hero.title_line1') %></span>
+          <span class="block text-emerald-400"><%= t('home.hero.title_line2') %></span>
+        </h1>
+        <p class="mt-6 text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
+          <%= t('home.hero.subtitle') %>
+        </p>
+
+        <div class="mt-10 max-w-md mx-auto">
+          <%= button_to t('home.hero.cta_try_free'), start_checkout_path, method: :post,
+              data: { turbo: false },
+              class: "w-full sm:w-auto px-8 py-4 text-lg font-semibold rounded-lg text-gray-900 bg-emerald-500 hover:bg-emerald-400 transition-colors cursor-pointer" %>
+        </div>
+
+        <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <%= link_to demo_path, class: "inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/10 font-medium transition-colors" do %>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <%= t('home.hero.cta_demo') %>
+          <% end %>
+          <%= link_to book_demo_path, class: "inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-gray-600 text-gray-300 hover:bg-gray-700 font-medium transition-colors" do %>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <%= t('home.hero.cta_book_demo') %>
+          <% end %>
+        </div>
+
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+            <%= t('home.hero.feature_scoring') %>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <%= t('home.hero.feature_tracking') %>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+            <%= t('home.hero.feature_coaching') %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="demo-preview" class="bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold"><%= t('home.demo_preview.title') %></h2>
+        <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+          <%= t('home.demo_preview.subtitle') %>
+        </p>
+      </div>
+
+      <div class="max-w-5xl mx-auto">
+        <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+        <div class="sl-embed" style="position:relative;padding-bottom:calc(53.05% + 25px);width:100%;height:0;transform:scale(1)">
+          <iframe loading="lazy" class="sl-demo" src="https://app.storylane.io/demo/nvbz5n7mcql5?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="pricing" class="bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold"><%= t('home.pricing.title') %></h2>
+        <p class="mt-4 text-gray-400"><%= t('home.pricing.subtitle') %></p>
+      </div>
+
+      <div class="max-w-lg mx-auto bg-gray-800/50 border border-emerald-500/30 rounded-2xl p-8" data-controller="pricing">
+        <div class="text-center">
+          <h3 class="text-lg font-medium text-gray-300 mb-4"><%= t('home.pricing.plan_name') %> <span class="text-sm text-emerald-400 font-normal"><%= t('home.pricing.cloud_version') %></span></h3>
+          <div class="flex items-baseline justify-center gap-1">
+            <span class="text-2xl text-gray-400" data-pricing-target="symbol"><%= t('home.pricing.currency_symbol') %></span>
+            <span class="text-5xl font-bold" data-pricing-target="amount"><%= t('home.pricing.price') %></span>
+            <span class="text-xl text-gray-400" data-pricing-target="period"><%= t('home.pricing.period') %></span>
+          </div>
+          <p class="mt-3 text-gray-400"><%= t('home.pricing.billing_info') %></p>
+          <p class="mt-1 text-sm text-emerald-400"><%= t('home.pricing.trial_info') %></p>
+        </div>
+
+        <div class="mt-8 pt-8 border-t border-gray-700">
+          <p class="text-sm font-medium text-gray-300 mb-4"><%= t('home.pricing.features_title') %></p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><%= raw t('home.pricing.feature_unlimited_users') %></span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><%= t('home.pricing.feature_widget') %></span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><%= t('home.pricing.feature_custom_ai') %></span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><%= t('home.pricing.feature_domain') %></span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><%= t('home.pricing.feature_analytics') %></span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><%= t('home.pricing.feature_sso') %></span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><%= t('home.pricing.feature_support') %></span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><%= t('home.pricing.feature_integrations') %></span>
+            </li>
+          </ul>
+        </div>
+
+        <%= button_to t('home.pricing.cta_start_trial'), start_checkout_path, method: :post,
+            data: { turbo: false },
+            class: "mt-8 w-full inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-lg text-gray-900 bg-emerald-500 hover:bg-emerald-400 transition-colors cursor-pointer" %>
+
+        <p class="mt-4 text-center text-sm text-gray-500">
+          <%= t('home.pricing.enterprise_text') %> <a href="mailto:risto@viher.it" class="text-emerald-400 hover:text-emerald-300"><%= t('home.pricing.enterprise_link') %></a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="features" class="bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold"><%= t('home.features.title') %></h2>
+      <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+        <%= t('home.features.subtitle') %>
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
+        <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold mb-2"><%= t('home.features.config_title') %></h3>
+        <p class="text-gray-400 text-sm"><%= t('home.features.config_description') %></p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
+        <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+        </div>
+        <h3 class="font-semibold mb-2"><%= t('home.features.widget_title') %></h3>
+        <p class="text-gray-400 text-sm"><%= t('home.features.widget_description') %></p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
+        <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold mb-2"><%= t('home.features.domain_title') %></h3>
+        <p class="text-gray-400 text-sm"><%= t('home.features.domain_description') %></p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
+        <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold mb-2"><%= t('home.features.analytics_title') %></h3>
+        <p class="text-gray-400 text-sm"><%= t('home.features.analytics_description') %></p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
+        <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold mb-2"><%= t('home.features.sso_title') %></h3>
+        <p class="text-gray-400 text-sm"><%= t('home.features.sso_description') %></p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
+        <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+          </svg>
+        </div>
+        <h3 class="font-semibold mb-2"><%= t('home.features.multilang_title') %></h3>
+        <p class="text-gray-400 text-sm"><%= t('home.features.multilang_description') %></p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="dashboard" class="bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold">Powerful Admin Dashboard</h2>
+        <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+          Everything you need to manage your AI coaching platform in one place
+        </p>
+      </div>
+
+      <div class="max-w-5xl mx-auto bg-gray-900 rounded-xl border border-gray-700 overflow-hidden shadow-2xl">
+        <div class="bg-gray-800 px-4 py-3 flex items-center gap-2 border-b border-gray-700">
+          <div class="flex gap-1.5">
+            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+          </div>
+          <div class="flex-1 ml-4">
+            <div class="bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 max-w-md">
+              https://app.devometric.com/dashboard
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="w-48 bg-gray-850 border-r border-gray-700 p-4 hidden sm:block" style="background: #1a1d23;">
+            <div class="flex items-center gap-2 mb-6">
+              <img src="/logo.png" alt="Devometric" class="h-6 w-auto">
+            </div>
+            <nav class="space-y-1 text-sm">
+              <a class="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-500/10 text-emerald-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+                Dashboard
+              </a>
+              <a class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                Team
+              </a>
+              <a class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                Analytics
+              </a>
+              <a class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                AI Trends
+              </a>
+              <a class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                Settings
+              </a>
+            </nav>
+          </div>
+
+          <div class="flex-1 p-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+              <div class="bg-gray-800/50 rounded-lg p-4">
+                <p class="text-xs text-gray-500 uppercase tracking-wider">Active Users</p>
+                <p class="text-2xl font-bold mt-1">247</p>
+                <p class="text-xs text-emerald-400 mt-1">+12% this week</p>
+              </div>
+              <div class="bg-gray-800/50 rounded-lg p-4">
+                <p class="text-xs text-gray-500 uppercase tracking-wider">Messages Today</p>
+                <p class="text-2xl font-bold mt-1">1,842</p>
+                <p class="text-xs text-emerald-400 mt-1">+8% vs yesterday</p>
+              </div>
+              <div class="bg-gray-800/50 rounded-lg p-4">
+                <p class="text-xs text-gray-500 uppercase tracking-wider">Avg AI Score</p>
+                <p class="text-2xl font-bold mt-1">67<span class="text-lg text-gray-500">/100</span></p>
+                <p class="text-xs text-emerald-400 mt-1">+5 pts this month</p>
+              </div>
+              <div class="bg-gray-800/50 rounded-lg p-4">
+                <p class="text-xs text-gray-500 uppercase tracking-wider">Sessions</p>
+                <p class="text-2xl font-bold mt-1">892</p>
+                <p class="text-xs text-gray-400 mt-1">This month</p>
+              </div>
+            </div>
+
+            <div class="bg-gray-800/50 rounded-lg p-4 mb-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="font-medium">Usage Overview</h3>
+                <select class="bg-gray-700 text-xs rounded px-2 py-1 border-0">
+                  <option>Last 7 days</option>
+                </select>
+              </div>
+              <div class="h-32 flex items-end gap-2">
+                <div class="flex-1 bg-emerald-500/20 rounded-t" style="height: 45%"></div>
+                <div class="flex-1 bg-emerald-500/20 rounded-t" style="height: 62%"></div>
+                <div class="flex-1 bg-emerald-500/20 rounded-t" style="height: 78%"></div>
+                <div class="flex-1 bg-emerald-500/20 rounded-t" style="height: 55%"></div>
+                <div class="flex-1 bg-emerald-500/20 rounded-t" style="height: 89%"></div>
+                <div class="flex-1 bg-emerald-500/20 rounded-t" style="height: 72%"></div>
+                <div class="flex-1 bg-emerald-500/40 rounded-t" style="height: 95%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-gray-500 mt-2">
+                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+              </div>
+            </div>
+
+            <div class="bg-gray-800/50 rounded-lg p-4">
+              <h3 class="font-medium mb-3">Recent Sessions</h3>
+              <div class="space-y-2 text-sm">
+                <div class="flex items-center justify-between py-2 border-b border-gray-700">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center text-xs">JD</div>
+                    <div>
+                      <p class="font-medium">John D.</p>
+                      <p class="text-xs text-gray-500">Asked about React testing patterns</p>
+                    </div>
+                  </div>
+                  <span class="text-xs text-gray-500">2m ago</span>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-gray-700">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center text-xs">SK</div>
+                    <div>
+                      <p class="font-medium">Sarah K.</p>
+                      <p class="text-xs text-gray-500">Explored AI code review workflows</p>
+                    </div>
+                  </div>
+                  <span class="text-xs text-gray-500">15m ago</span>
+                </div>
+                <div class="flex items-center justify-between py-2">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-emerald-500/20 rounded-full flex items-center justify-center text-xs">MR</div>
+                    <div>
+                      <p class="font-medium">Mike R.</p>
+                      <p class="text-xs text-gray-500">Completed AI skills assessment</p>
+                    </div>
+                  </div>
+                  <span class="text-xs text-gray-500">1h ago</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="team-performance" class="bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Track Team Progress</h2>
+        <p class="text-gray-400 mb-6">
+          See how your engineering team adopts AI tools. Identify champions, track skill progression, and understand where your team needs support.
+        </p>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Individual AI nativeness scores</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Team-wide skill gap analysis</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Most asked topics & questions</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Progress tracking over time</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-900 rounded-xl border border-gray-700 overflow-hidden shadow-xl">
+        <div class="bg-gray-800 px-4 py-3 border-b border-gray-700">
+          <h3 class="text-sm font-medium">Team Performance</h3>
+        </div>
+        <div class="p-4">
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 p-3 bg-gray-800/50 rounded-lg">
+              <div class="w-10 h-10 bg-emerald-500/20 rounded-full flex items-center justify-center text-sm font-medium">AJ</div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium">Alex Johnson</span>
+                  <span class="text-emerald-400 font-bold">92</span>
+                </div>
+                <div class="flex items-center gap-2 mt-1">
+                  <div class="flex-1 h-2 bg-gray-700 rounded-full overflow-hidden">
+                    <div class="h-full bg-emerald-500 rounded-full" style="width: 92%"></div>
+                  </div>
+                  <span class="text-xs text-emerald-400">AI Champion</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-3 bg-gray-800/50 rounded-lg">
+              <div class="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center text-sm font-medium">SM</div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium">Sarah Miller</span>
+                  <span class="text-blue-400 font-bold">78</span>
+                </div>
+                <div class="flex items-center gap-2 mt-1">
+                  <div class="flex-1 h-2 bg-gray-700 rounded-full overflow-hidden">
+                    <div class="h-full bg-blue-500 rounded-full" style="width: 78%"></div>
+                  </div>
+                  <span class="text-xs text-blue-400">Proficient</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-3 bg-gray-800/50 rounded-lg">
+              <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center text-sm font-medium">JW</div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium">James Wilson</span>
+                  <span class="text-purple-400 font-bold">65</span>
+                </div>
+                <div class="flex items-center gap-2 mt-1">
+                  <div class="flex-1 h-2 bg-gray-700 rounded-full overflow-hidden">
+                    <div class="h-full bg-purple-500 rounded-full" style="width: 65%"></div>
+                  </div>
+                  <span class="text-xs text-purple-400">Developing</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-3 bg-gray-800/50 rounded-lg">
+              <div class="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center text-sm font-medium">EL</div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium">Emma Lee</span>
+                  <span class="text-yellow-400 font-bold">45</span>
+                </div>
+                <div class="flex items-center gap-2 mt-1">
+                  <div class="flex-1 h-2 bg-gray-700 rounded-full overflow-hidden">
+                    <div class="h-full bg-yellow-500 rounded-full" style="width: 45%"></div>
+                  </div>
+                  <span class="text-xs text-yellow-400">Beginner</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-4 border-t border-gray-700">
+            <p class="text-xs text-gray-500 uppercase tracking-wider mb-3">Team Skill Gaps</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-red-500/10 text-red-400 text-xs rounded-full">Prompt Engineering</span>
+              <span class="px-2 py-1 bg-orange-500/10 text-orange-400 text-xs rounded-full">Code Review with AI</span>
+              <span class="px-2 py-1 bg-yellow-500/10 text-yellow-400 text-xs rounded-full">AI Testing Tools</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="ai-trends" class="bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1 bg-gray-900 rounded-xl border border-gray-700 overflow-hidden shadow-xl">
+          <div class="bg-gray-800 px-4 py-3 border-b border-gray-700 flex items-center justify-between">
+            <h3 class="text-sm font-medium">AI Trends & Learning Hub</h3>
+            <span class="px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-xs rounded-full">5 new</span>
+          </div>
+          <div class="p-4 space-y-4">
+            <div class="p-3 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="font-medium">Claude Opus 4.5</span>
+                    <span class="px-1.5 py-0.5 bg-emerald-500/20 text-emerald-400 text-xs rounded">HOT</span>
+                  </div>
+                  <p class="text-sm text-gray-400 mt-1">Top-ranked coding model with 77.2% on SWE-bench. Extended thinking mode plans before coding.</p>
+                  <p class="text-xs text-emerald-400 mt-2">Recommended for: All Engineering Teams</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-3 bg-gray-800/50 rounded-lg">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="font-medium">Multi-Model Workflow Mastery</span>
+                  <p class="text-sm text-gray-400 mt-1">Learn to combine Claude, GPT-5, and Gemini 3 for optimal results by use case.</p>
+                  <div class="flex items-center gap-4 mt-2">
+                    <span class="text-xs text-gray-500">8 lessons</span>
+                    <span class="text-xs text-gray-500">~1.5 hours</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-3 bg-gray-800/50 rounded-lg">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="font-medium">Tree of Thoughts Prompting</span>
+                    <span class="px-1.5 py-0.5 bg-purple-500/20 text-purple-400 text-xs rounded">NEW</span>
+                  </div>
+                  <p class="text-sm text-gray-400 mt-1">Evolves Chain-of-Thought with branching exploration. Ideal for multi-step architecture decisions.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-3 bg-gray-800/50 rounded-lg">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="font-medium">Copilot Memory & Claude Integration</span>
+                  <p class="text-sm text-gray-400 mt-1">New Memory feature learns your codebase. Claude Opus 4.5 now available in Copilot.</p>
+                  <p class="text-xs text-orange-400 mt-2">Enable for your team</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-3 bg-gray-800/50 rounded-lg">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="font-medium">Cursor vs Windsurf Comparison</span>
+                    <span class="px-1.5 py-0.5 bg-cyan-500/20 text-cyan-400 text-xs rounded">GUIDE</span>
+                  </div>
+                  <p class="text-sm text-gray-400 mt-1">Choose the right AI IDE: Cursor for speed & control, Windsurf for deep codebase context.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <h2 class="text-3xl font-bold mb-4">Stay Ahead of AI Trends</h2>
+          <p class="text-gray-400 mb-6">
+            The AI landscape changes weekly. We curate the most relevant tools, techniques, and learning resources based on your team's tech stack and skill gaps.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Curated for your tech stack</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Weekly AI tool updates & releases</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Learning paths based on skill gaps</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Actionable recommendations</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-white">Easy to embed</h2>
+        <p class="mt-4 text-gray-400">Just one line of code</p>
+      </div>
+
+      <div class="max-w-2xl mx-auto">
+        <div class="bg-gray-900 rounded-xl p-6 font-mono text-sm">
+          <div class="text-gray-500 mb-2">&lt;!-- Add to your internal portal --&gt;</div>
+          <div>
+            <span class="text-pink-400">&lt;script</span>
+            <span class="text-emerald-400"> src</span><span class="text-white">=</span><span class="text-yellow-300">"https://embed.devometric.com/widget.js"</span>
+          </div>
+          <div class="pl-8">
+            <span class="text-emerald-400">data-key</span><span class="text-white">=</span><span class="text-yellow-300">"YOUR_EMBED_KEY"</span>
+          </div>
+          <div class="pl-8">
+            <span class="text-emerald-400">data-position</span><span class="text-white">=</span><span class="text-yellow-300">"bottom-right"</span>
+          </div>
+          <div>
+            <span class="text-pink-400">&gt;&lt;/script&gt;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="security" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-white">Enterprise-grade security</h2>
+      <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+        Your data security is our top priority. Built for security-conscious teams.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-center">
+        <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold mb-2 text-white">Encrypted at Rest</h3>
+        <p class="text-gray-400 text-sm">All data encrypted with AES-256</p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-center">
+        <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold mb-2 text-white">Bring Your Own Key</h3>
+        <p class="text-gray-400 text-sm">Use your own Anthropic API key</p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-center">
+        <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+          </svg>
+        </div>
+        <h3 class="font-semibold mb-2 text-white">Self-Hosted Option</h3>
+        <p class="text-gray-400 text-sm">Deploy on your own infrastructure</p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-center">
+        <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold mb-2 text-white">GDPR Compliant</h3>
+        <p class="text-gray-400 text-sm">Full EU data protection compliance</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <a href="/security" class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-2">
+        Learn more about our security
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <div id="how-it-works" class="bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm font-medium rounded-full">Our Technology</span>
+          <h2 class="text-3xl font-bold mt-4 mb-4 text-white">Powered by Advanced AI (tm)</h2>
+          <p class="text-gray-400 mb-6">
+            Devometric uses a custom <strong class="text-white">RAG (Retrieval-Augmented Generation)</strong> architecture combined with state-of-the-art Large Language Models to deliver accurate assessments and personalized recommendations.
+          </p>
+
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-medium text-sm text-white">Custom RAG System</p>
+                <p class="text-gray-400 text-sm">Real-time retrieval of the latest AI tools, techniques, and best practices</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-medium text-sm text-white">High-Performance LLM</p>
+                <p class="text-gray-400 text-sm">Powered by Claude, delivering nuanced technical understanding</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-medium text-sm text-white">Engineered Prompts</p>
+                <p class="text-gray-400 text-sm">Carefully crafted system prompts for consistent, quality assessments</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="/how-it-works" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/10 font-medium transition-colors">
+            Learn how we calculate scores
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="bg-gray-900/50 border border-gray-700 rounded-xl p-8">
+          <h3 class="font-semibold text-center mb-6 text-white">The Assessment Flow</h3>
+
+          <div class="space-y-4">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-gray-900 font-bold flex-shrink-0">1</div>
+              <div class="flex-1 bg-gray-800/50 rounded-lg p-3">
+                <p class="font-medium text-sm text-white">Conversational Assessment</p>
+                <p class="text-xs text-gray-400">Natural dialogue evaluates your AI skills</p>
+              </div>
+            </div>
+
+            <div class="flex justify-center pl-5">
+              <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-gray-900 font-bold flex-shrink-0">2</div>
+              <div class="flex-1 bg-gray-800/50 rounded-lg p-3">
+                <p class="font-medium text-sm text-white">RAG + LLM Analysis</p>
+                <p class="text-xs text-gray-400">AI evaluates responses with current knowledge</p>
+              </div>
+            </div>
+
+            <div class="flex justify-center pl-5">
+              <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-gray-900 font-bold flex-shrink-0">3</div>
+              <div class="flex-1 bg-gray-800/50 rounded-lg p-3">
+                <p class="font-medium text-sm text-white">Personalized Score & Plan</p>
+                <p class="text-xs text-gray-400">Get your AI Nativeness Score + action items</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-gray-700 text-center">
+            <p class="text-xs text-gray-500">Assessment takes ~5 minutes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white"><%= t('home.cta.title') %></h2>
+        <p class="text-gray-400 mb-8">
+          <%= t('home.cta.subtitle') %>
+        </p>
+
+        <%= button_to t('home.cta.button'), start_checkout_path, method: :post,
+            data: { turbo: false },
+            class: "px-8 py-4 text-lg font-semibold rounded-lg text-gray-900 bg-emerald-500 hover:bg-emerald-400 transition-colors cursor-pointer" %>
+        <p class="text-sm text-gray-500 mt-4"><%= t('home.cta.trial_note') %></p>
+
+        <div class="mt-12 pt-8 border-t border-gray-700">
+          <p class="text-gray-400 mb-4"><%= t('home.cta.newsletter_title') %></p>
+          <%= form_with model: WaitlistEntry.new, url: waitlist_index_path, local: true, class: "flex flex-col sm:flex-row gap-3 max-w-md mx-auto" do |f| %>
+            <%= f.email_field :email, placeholder: t('home.cta.email_placeholder'), required: true,
+                class: "flex-1 px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent" %>
+            <%= f.hidden_field :source, value: "newsletter" %>
+            <%= f.submit t('home.cta.subscribe'), class: "px-6 py-3 text-base font-semibold rounded-lg text-white bg-gray-600 hover:bg-gray-500 transition-colors cursor-pointer whitespace-nowrap" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= render 'shared/footer' %>
+</div>

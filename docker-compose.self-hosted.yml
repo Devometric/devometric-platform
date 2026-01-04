@@ -1,0 +1,99 @@
+# AI Adoption Coach - Self-Hosted Deployment
+#
+# Quick Start:
+#   1. Copy .env.example to .env and configure
+#   2. Run: docker compose -f docker-compose.self-hosted.yml up -d
+#   3. Run: docker compose -f docker-compose.self-hosted.yml exec app rails db:setup
+#   4. Pull an Ollama model: docker compose -f docker-compose.self-hosted.yml exec ollama ollama pull llama3.2
+#   5. Open http://localhost:3000
+#
+# For airgapped deployment, pre-pull the Ollama model and use local images.
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai_coach_app
+    environment:
+      RAILS_ENV: production
+      RAILS_MASTER_KEY: ${RAILS_MASTER_KEY}
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE}
+      DATABASE_URL: postgres://ai_coach:${POSTGRES_PASSWORD:-password}@db:5432/ai_coach_production
+      REDIS_URL: redis://redis:6379/0
+      # LLM Configuration - choose your provider
+      LLM_PROVIDER: ${LLM_PROVIDER:-ollama}
+      # Ollama (default - runs locally, no API key needed)
+      OLLAMA_HOST: http://ollama:11434
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2}
+      # OpenAI (optional)
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o}
+      # Anthropic (optional)
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-sonnet-4-20250514}
+      # Rails
+      RAILS_LOG_TO_STDOUT: "true"
+      RAILS_SERVE_STATIC_FILES: "true"
+    ports:
+      - "3000:80"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      ollama:
+        condition: service_started
+    restart: unless-stopped
+    volumes:
+      - app_storage:/rails/storage
+
+  db:
+    image: postgres:16-alpine
+    container_name: ai_coach_db
+    environment:
+      POSTGRES_USER: ai_coach
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+      POSTGRES_DB: ai_coach_production
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ai_coach"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: ai_coach_redis
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ai_coach_ollama
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    # Uncomment for GPU support:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+volumes:
+  postgres_data:
+  redis_data:
+  app_storage:
+  ollama_data:

@@ -1,0 +1,263 @@
+sv:
+  languages:
+    en: "English"
+    fi: "Suomi"
+    sv: "Svenska"
+    es: "Español"
+    de: "Deutsch"
+
+  meta:
+    site_name: "Devometric"
+    default_title: "Devometric - AI-kompetensanalys och coachning för utvecklingsteam"
+    default_description: "Mät och förbättra ditt utvecklingsteams AI-kompetens med personliga bedömningar, framstegsuppföljning och coachning."
+    keywords: "AI-kompetens, utvecklingsteam, AI-bedömning, AI-coachning, utvecklarproduktivitet, AI-adoption"
+
+  header:
+    nav:
+      demo: "Demo"
+      how_it_works: "Hur det fungerar"
+      security: "Säkerhet"
+
+  footer:
+    tagline: "AI-kompetensplattform för utvecklingsteam"
+    on_waitlist: "på väntelistan"
+    contact: "Kontakt"
+    privacy: "Integritet"
+    terms: "Villkor"
+    built_by: "Skapad av"
+    other_projects: "Andra projekt:"
+    open_source: "Öppen källkod"
+    about: "Om oss"
+    brands: "Varumärken"
+    company_info:
+      owned_by: "Devometric ägs av"
+      industry: "IT-konsulting & tjänster"
+      business_id: "Organisationsnummer"
+
+  home:
+    hero:
+      title_line1: "Mät och förbättra"
+      title_line2: "ditt teams AI-kompetens"
+      subtitle: "En plattform som bedömer ditt utvecklingsteams AI-förmågor, följer framsteg och levererar personlig coachning för att accelerera AI-adoption."
+      cta_try_free: "Prova gratis"
+      cta_demo: "Ta AI-kompetenstestet"
+      cta_book_demo: "Boka en demo"
+      feature_scoring: "AI-mognadsbedömning"
+      feature_tracking: "Teamets framstegsuppföljning"
+      feature_coaching: "Personlig coachning"
+
+    demo_preview:
+      title: "Se det i aktion"
+      subtitle: "Ta en interaktiv rundtur av plattformen"
+
+    pricing:
+      title: "Enkel, transparent prissättning"
+      subtitle: "Ett fast pris för hela ditt team. Inga per-användare-avgifter."
+      plan_name: "Teamplan"
+      cloud_version: "Molnversion"
+      currency_symbol: "€"
+      price: "189"
+      period: "/månad"
+      billing_info: "Faktureras månadsvis. Avsluta när som helst."
+      trial_info: "14 dagars gratis provperiod ingår"
+      features_title: "Allt du behöver:"
+      feature_unlimited_users: "<strong>Obegränsat antal användare</strong> - ingen per-användare-prissättning"
+      feature_widget: "Inbäddningsbar JavaScript-widget"
+      feature_custom_ai: "Anpassade AI-instruktioner och policyer"
+      feature_domain: "Domänvitlistning och säkerhet"
+      feature_analytics: "Användningsanalys-dashboard"
+      feature_sso: "SSO-användaridentifiering"
+      feature_support: "Prioriterad e-postsupport"
+      feature_integrations: "Slack & Teams-integration"
+      cta_start_trial: "Starta 14 dagars gratis provperiod"
+      enterprise_text: "Behöver du företagsfunktioner?"
+      enterprise_link: "Kontakta oss"
+
+    features:
+      title: "Allt du behöver"
+      subtitle: "En komplett plattform för att hjälpa ditt utvecklingsteam att anta AI-bästa praxis"
+      config_title: "Företagskonfiguration"
+      config_description: "Anpassa chatboten med dina policyer, kodstandarder, teknologistack och arbetskultur."
+      widget_title: "Inbäddningsbar widget"
+      widget_description: "Lägg till en enda script-tagg i din interna portal. Fungerar överallt där JavaScript körs."
+      domain_title: "Domänvitlistning"
+      domain_description: "Kontrollera exakt var din chatbot kan bäddas in med domännivåsäkerhet."
+      analytics_title: "Användningsanalys"
+      analytics_description: "Spåra meddelanden, sessioner och användarengagemang. Se hur ditt team använder AI."
+      sso_title: "SSO-integration"
+      sso_description: "Skicka användar-ID:n för personliga svar och teamnivåanalys."
+      multilang_title: "Flerspråkigt"
+      multilang_description: "Stöder engelska, finska, spanska och tyska direkt ur lådan."
+
+    dashboard:
+      title: "Kraftfull admin-dashboard"
+      subtitle: "Allt du behöver för att hantera din AI-coachningsplattform på ett ställe"
+      nav_dashboard: "Dashboard"
+      nav_team: "Team"
+      nav_analytics: "Analys"
+      nav_ai_trends: "AI-trender"
+      nav_settings: "Inställningar"
+      stat_active_users: "Aktiva användare"
+      stat_messages_today: "Meddelanden idag"
+      stat_avg_score: "Genomsnittlig AI-poäng"
+      stat_sessions: "Sessioner"
+      stat_this_week: "+12% denna vecka"
+      stat_vs_yesterday: "+8% jämfört med igår"
+      stat_this_month: "+5 poäng denna månad"
+      usage_overview: "Användningsöversikt"
+      last_7_days: "Senaste 7 dagarna"
+      recent_sessions: "Senaste sessioner"
+
+    team_performance:
+      title: "Följ teamets framsteg"
+      subtitle: "Se hur ditt utvecklingsteam antar AI-verktyg. Identifiera mästare, följ kompetensutveckling och förstå var ditt team behöver stöd."
+      feature_scores: "Individuella AI-mognadspoäng"
+      feature_gaps: "Teamomfattande kompetensanalys"
+      feature_topics: "Mest ställda ämnen och frågor"
+      feature_progress: "Framstegsuppföljning över tid"
+      section_title: "Teamprestanda"
+      ai_champion: "AI-mästare"
+      proficient: "Skicklig"
+      developing: "Utvecklande"
+      beginner: "Nybörjare"
+      skill_gaps: "Teamets kompetensbrister"
+      skill_prompt: "Prompt-teknik"
+      skill_review: "Kodgranskning med AI"
+      skill_testing: "AI-testverktyg"
+
+    ai_trends:
+      title: "Ligga steget före AI-trender"
+      subtitle: "AI-landskapet förändras varje vecka. Vi kuraterar de mest relevanta verktygen, teknikerna och lärresurserna baserat på ditt teams teknologistack och kompetensbrister."
+      feature_curated: "Kurerat för din teknologistack"
+      feature_updates: "Veckovisa AI-verktygsuppdateringar och releaser"
+      feature_learning: "Lärstigar baserade på kompetensbrister"
+      feature_recommendations: "Handlingsbara rekommendationer"
+      section_title: "AI-trender och lärcenter"
+      new_badge: "5 nya"
+      hot_badge: "HETT"
+      new_tag: "NYTT"
+      guide_tag: "GUIDE"
+      recommended_for: "Rekommenderat för: Alla utvecklingsteam"
+      lessons: "8 lektioner"
+      duration: "~1,5 timmar"
+      enable_team: "Aktivera för ditt team"
+
+    embed:
+      title: "Enkelt att bädda in"
+      subtitle: "Bara en rad kod"
+      comment: "<!-- Lägg till i din interna portal -->"
+
+    security:
+      title: "Företagssäkerhet"
+      subtitle: "Din datasäkerhet är vår högsta prioritet. Byggd för säkerhetsmedvetna team."
+      encrypted_title: "Krypterad i vila"
+      encrypted_description: "All data krypterad med AES-256"
+      byok_title: "Ta med egen nyckel"
+      byok_description: "Använd din egen Anthropic API-nyckel"
+      self_hosted_title: "Självhostat alternativ"
+      self_hosted_description: "Distribuera på din egen infrastruktur"
+      gdpr_title: "GDPR-kompatibel"
+      gdpr_description: "Full EU-dataskyddsefterlevnad"
+      learn_more: "Läs mer om vår säkerhet"
+
+    how_it_works:
+      badge: "Vår teknologi"
+      title: "Drivs av Devometric (tm)"
+      subtitle: "Devometric använder en anpassad <strong>RAG (Retrieval-Augmented Generation)</strong>-arkitektur kombinerad med toppmoderna stora språkmodeller för att leverera exakta bedömningar och personliga rekommendationer."
+      rag_title: "Anpassat RAG-system"
+      rag_description: "Realtidshämtning av de senaste AI-verktygen, teknikerna och bästa praxis"
+      llm_title: "Högpresterande LLM"
+      llm_description: "Drivs av Claude, levererar nyanserad teknisk förståelse"
+      prompts_title: "Konstruerade prompts"
+      prompts_description: "Noggrant utformade systempromptar för konsekventa, kvalitativa bedömningar"
+      cta: "Lär dig hur vi beräknar poäng"
+      flow_title: "Bedömningsflödet"
+      step1_title: "Konversationsbaserad bedömning"
+      step1_description: "Naturlig dialog utvärderar dina AI-kompetenser"
+      step2_title: "RAG + LLM-analys"
+      step2_description: "AI utvärderar svar med aktuell kunskap"
+      step3_title: "Personlig poäng och plan"
+      step3_description: "Få din AI-mognadspoäng + åtgärder"
+      flow_note: "Bedömningen tar ~5 minuter"
+
+    cta:
+      title: "Redo att göra ditt team AI-native?"
+      subtitle: "Starta din gratis provperiod idag och se skillnaden."
+      button: "Prova gratis"
+      trial_note: "14 dagars gratis provperiod. Inget kreditkort krävs för att starta."
+      newsletter_title: "Inte redo än? Få AI-adoptionstips i din inkorg."
+      email_placeholder: "Ange din e-post"
+      subscribe: "Prenumerera"
+
+  demo:
+    title: "Interaktiv demo"
+    meta_title: "Devometric Demo - Prova AI-kompetensbedömningen"
+    meta_description: "Upplev Devometrics AI-kompetensbedömning på egen hand. Ta vår interaktiva demo för att se hur vi mäter och förbättrar ditt teams AI-förmågor."
+
+  how_it_works_page:
+    meta_title: "Hur Devometric fungerar - AI-kompetenspoäng och rekommendationer förklarade | FAQ"
+    meta_description: "Lär dig hur Devometric beräknar AI-mognadspoäng med RAG-teknologi och LLM:er. Förstå vår bedömningsmetodik och få svar på vanliga frågor."
+    cta:
+      title: "Redo att bedöma ditt teams AI-kompetens?"
+      description: "Upplev vår AI-drivna bedömning på egen hand med en gratis demo."
+      demo_button: "Prova demo"
+      trial_button: "Starta gratis provperiod"
+      trial_note: "14 dagars gratis provperiod. Inget kreditkort krävs."
+
+  security_page:
+    meta_title: "Säkerhet - Devometric"
+    meta_description: "Lär dig om Devometrics företagssäkerhetsfunktioner inklusive kryptering, GDPR-efterlevnad och självhostade alternativ."
+
+  about:
+    meta_title: "Om oss - Devometric"
+    meta_description: "Lär känna Risto Holappa, grundaren av Devometric och Devometric, med över 10 års erfarenhet av modern mjukvaruutveckling."
+    badge: "Om oss"
+    title: "Möt grundaren"
+    subtitle: "Vi bygger verktyg för att hjälpa utvecklingsteam att blomstra i AI-eran."
+    founder:
+      role: "Grundare & CTO"
+      bio_1: "Risto Holappa är en mjukvaruutvecklare och entreprenör med över 10 års erfarenhet av modern mjukvaruutveckling. Som CTO på två företag har han lett utvecklingen av skalbara webbapplikationer, molninfrastruktur och AI-drivna produkter."
+      bio_2: "Hans passion ligger i att hjälpa utvecklingsteam att effektivt anta AI-verktyg och bli mer produktiva. Detta ledde till skapandet av Devometric och Devometric-teknologin som driver den."
+      bio_3: "Baserad i Finland kombinerar Risto djup teknisk expertis med en praktisk förståelse för vad utvecklingsteam behöver för att lyckas i dagens snabbt föränderliga tekniklandskap."
+    companies:
+      title: "Företag"
+      viher:
+        tagline: "IT-konsulting & tjänster"
+        description: "Viher IT erbjuder IT-konsulting och mjukvaruutvecklingstjänster, specialiserat på moderna webbteknologier, molnlösningar och AI-integration."
+      reipas:
+        tagline: "Affärskonsulting"
+        description: "Reipas Consulting erbjuder affärs- och teknikkonsulttjänster, hjälper företag att optimera sin verksamhet och digitala strategier."
+    products:
+      title: "Produkter & varumärken"
+      devometric:
+        description: "AI-kompetensbedömning och coachningsplattform för utvecklingsteam. Mät, följ och förbättra ditt teams AI-förmågor."
+      devometric_ai:
+        description: "Den proprietära RAG-baserade AI-teknologin som driver Devometrics intelligenta bedömningar och personliga rekommendationer."
+        note: "Driver Devometric"
+      learn_more: "Läs mer"
+    contact:
+      title: "Låt oss koppla ihop"
+      subtitle: "Intresserad av att lära dig mer om Devometric eller diskutera ett partnerskap?"
+      cta_demo: "Boka en demo"
+      cta_email: "Skicka ett e-post"
+
+  book_demo:
+    meta_title: "Boka en demo - Devometric"
+    meta_description: "Boka en personlig demo av Devometric. Se hur vår AI-kompetensbedömningsplattform kan hjälpa ditt utvecklingsteam."
+    badge: "Kom igång"
+    title: "Boka en demo"
+    subtitle: "Boka en personlig genomgång av Devometric och se hur det kan hjälpa ditt team att bli AI-native."
+    form:
+      name_label: "Ditt namn"
+      name_placeholder: "Anna Svensson"
+      email_label: "Jobbmail"
+      email_placeholder: "anna@foretag.se"
+      company_label: "Företag"
+      company_placeholder: "Företaget AB"
+      team_size_label: "Teamstorlek"
+      team_size_placeholder: "Välj teamstorlek"
+      message_label: "Något annat vi borde veta?"
+      message_placeholder: "Berätta om ditt teams mål för AI-adoption..."
+      submit: "Begär demo"
+      privacy_note: "Vi återkommer inom 24 timmar."
+    alternative: "Föredrar du e-post? Kontakta oss direkt på"

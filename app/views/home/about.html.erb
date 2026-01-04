@@ -1,0 +1,182 @@
+<% content_for :title, t('about.meta_title') %>
+<% content_for :meta_description, t('about.meta_description') %>
+
+<div class="min-h-screen text-white">
+  <%= render 'shared/header' %>
+
+  <!-- Header -->
+  <div class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-900 to-emerald-900/20"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-12">
+      <!-- Logo -->
+      <div class="flex justify-center mb-8">
+        <a href="<%= root_path %>">
+          <img src="/logo.png" alt="Devometric" class="h-12 sm:h-16 w-auto">
+        </a>
+      </div>
+
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/10 text-emerald-400 text-sm font-medium mb-6">
+          <%= t('about.badge') %>
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">
+          <%= t('about.title') %>
+        </h1>
+        <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
+          <%= t('about.subtitle') %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Content -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+    <!-- Founder Section -->
+    <section class="mb-16">
+      <div class="bg-gray-800/50 border border-gray-700 rounded-2xl p-8">
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <!-- Profile -->
+          <div class="flex-shrink-0 text-center md:text-left">
+            <div class="w-32 h-32 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-2xl flex items-center justify-center text-4xl font-bold text-white mx-auto md:mx-0">
+              RH
+            </div>
+            <div class="mt-4 flex justify-center md:justify-start gap-3">
+              <a href="https://www.linkedin.com/in/rholappa/" target="_blank" rel="noopener" class="text-gray-400 hover:text-emerald-400 transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a href="https://github.com/RHolappa" target="_blank" rel="noopener" class="text-gray-400 hover:text-emerald-400 transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bio -->
+          <div class="flex-1">
+            <h2 class="text-2xl font-bold mb-2">Risto Holappa</h2>
+            <p class="text-emerald-400 font-medium mb-4"><%= t('about.founder.role') %></p>
+            <div class="prose prose-invert prose-sm max-w-none">
+              <p class="text-gray-300 mb-4">
+                <%= t('about.founder.bio_1') %>
+              </p>
+              <p class="text-gray-300 mb-4">
+                <%= t('about.founder.bio_2') %>
+              </p>
+              <p class="text-gray-300">
+                <%= t('about.founder.bio_3') %>
+              </p>
+            </div>
+
+            <!-- Skills -->
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-gray-700/50 text-gray-300 text-sm rounded-full">Ruby on Rails</span>
+              <span class="px-3 py-1 bg-gray-700/50 text-gray-300 text-sm rounded-full">React</span>
+              <span class="px-3 py-1 bg-gray-700/50 text-gray-300 text-sm rounded-full">TypeScript</span>
+              <span class="px-3 py-1 bg-gray-700/50 text-gray-300 text-sm rounded-full">AI/LLM</span>
+              <span class="px-3 py-1 bg-gray-700/50 text-gray-300 text-sm rounded-full">Cloud Architecture</span>
+              <span class="px-3 py-1 bg-gray-700/50 text-gray-300 text-sm rounded-full">DevOps</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6 text-center"><%= t('about.companies.title') %></h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Viher IT -->
+        <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">Viher IT</h3>
+              <p class="text-sm text-gray-400"><%= t('about.companies.viher.tagline') %></p>
+            </div>
+          </div>
+          <p class="text-gray-300 text-sm mb-4"><%= t('about.companies.viher.description') %></p>
+          <div class="text-xs text-gray-500 space-y-1">
+            <p><%= t('footer.company_info.business_id') %>: 3332303-3</p>
+            <p><a href="https://viher.it" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300">viher.it</a></p>
+          </div>
+        </div>
+
+        <!-- Reipas Consulting -->
+        <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">Reipas Consulting</h3>
+              <p class="text-sm text-gray-400"><%= t('about.companies.reipas.tagline') %></p>
+            </div>
+          </div>
+          <p class="text-gray-300 text-sm mb-4"><%= t('about.companies.reipas.description') %></p>
+          <div class="text-xs text-gray-500">
+            <p><a href="https://www.reipasconsulting.fi" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300">reipasconsulting.fi</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6 text-center"><%= t('about.products.title') %></h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Devometric -->
+        <div class="bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 border border-emerald-500/20 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="/logo.png" alt="Devometric" class="h-8 w-auto">
+          </div>
+          <p class="text-gray-300 text-sm mb-4"><%= t('about.products.devometric.description') %></p>
+          <a href="<%= root_path %>" class="text-emerald-400 hover:text-emerald-300 text-sm font-medium inline-flex items-center gap-1">
+            <%= t('about.products.learn_more') %>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Devometric AI -->
+        <div class="bg-gradient-to-br from-purple-500/10 to-purple-500/5 border border-purple-500/20 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="text-xl font-bold text-purple-400">Devometric AI</div>
+          </div>
+          <p class="text-gray-300 text-sm mb-4"><%= t('about.products.sinun_ai.description') %></p>
+          <span class="text-purple-400 text-sm font-medium"><%= t('about.products.sinun_ai.note') %></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="text-center">
+      <div class="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-gray-700 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold mb-4"><%= t('about.contact.title') %></h2>
+        <p class="text-gray-400 mb-6">
+          <%= t('about.contact.subtitle') %>
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <%= link_to book_demo_path, class: "inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-lg text-gray-900 bg-emerald-500 hover:bg-emerald-400 transition-colors" do %>
+            <%= t('about.contact.cta_demo') %>
+          <% end %>
+          <a href="mailto:info@viher.it" class="inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-lg border border-gray-600 text-gray-300 hover:bg-gray-700 transition-colors">
+            <%= t('about.contact.cta_email') %>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <%= render 'shared/footer' %>
+</div>
