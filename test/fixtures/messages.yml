@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+
+message_one:
+  chat_session: session_one
+  role: user
+  content: "Hello, how are you?"
+  tokens_used: 10
+
+message_two:
+  chat_session: session_one
+  role: assistant
+  content: "I'm doing well, thank you! How can I help you today?"
+  tokens_used: 15

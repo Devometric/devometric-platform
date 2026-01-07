@@ -18,8 +18,20 @@ module Admin
 
       # PATCH /admin/v1/security
       def update
+        old_settings = current_company.settings.dup
         settings = current_company.settings.merge(security_params.to_h)
         current_company.update!(settings: settings)
+
+        AuditLog.log!(
+          company: current_company,
+          action: "security_settings_update",
+          actor: current_company_admin,
+          request: request,
+          metadata: {
+            old_retention_days: old_settings["retention_days"],
+            new_retention_days: settings["retention_days"]
+          }
+        )
 
         render json: {
           success: true,
@@ -30,6 +42,18 @@ module Admin
       # POST /admin/v1/security/export
       def export
         format = params[:format] || "json"
+
+        AuditLog.log!(
+          company: current_company,
+          action: "data_export",
+          actor: current_company_admin,
+          request: request,
+          metadata: {
+            format: format,
+            chat_sessions_count: current_company.chat_sessions.count,
+            messages_count: current_company.chat_sessions.joins(:messages).count
+          }
+        )
 
         export_data = {
           company: company_export_data,
@@ -51,6 +75,9 @@ module Admin
         scope = params[:scope] || "all"
         older_than_days = params[:older_than_days]&.to_i
 
+        # Count records before deletion for audit
+        records_to_delete = count_records_to_delete(scope, older_than_days)
+
         case scope
         when "chat_sessions"
           destroy_chat_sessions(older_than_days)
@@ -61,6 +88,18 @@ module Admin
         else
           return render json: { error: "Invalid scope" }, status: :unprocessable_entity
         end
+
+        AuditLog.log!(
+          company: current_company,
+          action: "data_delete",
+          actor: current_company_admin,
+          request: request,
+          metadata: {
+            scope: scope,
+            older_than_days: older_than_days,
+            records_deleted: records_to_delete
+          }
+        )
 
         render json: {
           success: true,
@@ -74,6 +113,25 @@ module Admin
 
       def security_params
         params.require(:security).permit(:retention_days)
+      end
+
+      def count_records_to_delete(scope, older_than_days)
+        counts = {}
+
+        if scope.in?(%w[chat_sessions all])
+          sessions = current_company.chat_sessions
+          sessions = sessions.where("created_at < ?", older_than_days.days.ago) if older_than_days.present?
+          counts[:chat_sessions] = sessions.count
+          counts[:messages] = Message.where(chat_session_id: sessions.select(:id)).count
+        end
+
+        if scope.in?(%w[usage_logs all])
+          logs = current_company.usage_logs
+          logs = logs.where("date < ?", older_than_days.days.ago.to_date) if older_than_days.present?
+          counts[:usage_logs] = logs.count
+        end
+
+        counts
       end
 
       def company_export_data

@@ -1,0 +1,16 @@
+# frozen_string_literal: true
+
+allowed_domain:
+  company: acme
+  domain: allowed-domain.com
+  active: true
+
+another_allowed:
+  company: acme
+  domain: another-allowed.com
+  active: true
+
+inactive_domain:
+  company: acme
+  domain: inactive-domain.com
+  active: false

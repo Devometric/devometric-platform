@@ -21,6 +21,14 @@ module Admin
 
         current_company.update!(anthropic_api_key: api_key)
 
+        AuditLog.log!(
+          company: current_company,
+          action: "api_key_update",
+          actor: current_company_admin,
+          request: request,
+          metadata: { key_preview: key_preview }
+        )
+
         render json: {
           success: true,
           has_custom_key: true,
@@ -30,6 +38,13 @@ module Admin
 
       def destroy
         current_company.update!(anthropic_api_key: nil)
+
+        AuditLog.log!(
+          company: current_company,
+          action: "api_key_delete",
+          actor: current_company_admin,
+          request: request
+        )
 
         render json: {
           success: true,

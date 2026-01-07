@@ -28,6 +28,47 @@ class Rack::Attack
     req.ip if req.path == "/waitlist" && req.post?
   end
 
+  ### Admin API Rate Limiting ###
+
+  # Admin login - strict rate limiting to prevent brute force attacks
+  # 5 attempts per IP per 15 minutes
+  throttle("admin/login/ip", limit: 5, period: 15.minutes) do |req|
+    req.ip if req.path == "/admin/v1/auth/login" && req.post?
+  end
+
+  # Admin login - per email rate limiting (even stricter)
+  # 3 attempts per email per 15 minutes
+  throttle("admin/login/email", limit: 3, period: 15.minutes) do |req|
+    if req.path == "/admin/v1/auth/login" && req.post?
+      # Normalize email to prevent bypass via case variations
+      req.params.dig("auth", "email")&.downcase&.strip
+    end
+  end
+
+  # Admin registration - limit to prevent spam accounts
+  # 3 registrations per IP per hour
+  throttle("admin/register/ip", limit: 3, period: 1.hour) do |req|
+    req.ip if req.path == "/admin/v1/auth/register" && req.post?
+  end
+
+  # General admin API rate limiting
+  # 100 requests per IP per minute for authenticated endpoints
+  throttle("admin/api/ip", limit: 100, period: 1.minute) do |req|
+    req.ip if req.path.start_with?("/admin/v1/") && !req.path.include?("/auth/")
+  end
+
+  # Data export rate limiting - expensive operation
+  # 5 exports per admin per hour (tracked by IP as proxy)
+  throttle("admin/export/ip", limit: 5, period: 1.hour) do |req|
+    req.ip if req.path == "/admin/v1/security/export" && req.post?
+  end
+
+  # Data deletion rate limiting - dangerous operation
+  # 3 deletions per admin per hour
+  throttle("admin/delete/ip", limit: 3, period: 1.hour) do |req|
+    req.ip if req.path == "/admin/v1/security/data" && req.delete?
+  end
+
   ### Custom Responses ###
 
   # Return JSON for API endpoints, HTML for regular pages

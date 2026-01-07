@@ -1,0 +1,15 @@
+# frozen_string_literal: true
+
+admin_john:
+  company: acme
+  email: john@acme.com
+  encrypted_password: <%= Devise::Encryptor.digest(CompanyAdmin, 'password123') %>
+  name: John Admin
+  role: owner
+
+admin_jane:
+  company: acme
+  email: jane@acme.com
+  encrypted_password: <%= Devise::Encryptor.digest(CompanyAdmin, 'password456') %>
+  name: Jane Admin
+  role: admin

@@ -14,27 +14,35 @@ module EmbedAuthenticatable
     @current_company = find_company_by_embed_key
     return if @current_company && domain_allowed?
 
-    render json: { error: "Unauthorized" }, status: :unauthorized
+    render json: { error: 'Unauthorized' }, status: :unauthorized
   end
 
   def verify_subscription!
     return if @current_company&.has_active_subscription?
 
-    render json: { error: "Subscription required" }, status: :payment_required
+    render json: { error: 'Subscription required' }, status: :payment_required
   end
 
   def find_company_by_embed_key
-    embed_key = request.headers["X-Embed-Key"] || params[:embed_key]
+    embed_key = request.headers['X-Embed-Key'] || params[:embed_key]
     return nil if embed_key.blank?
 
     Company.active.find_by(embed_key: embed_key)
   end
 
   def domain_allowed?
-    origin = request.headers["Origin"] || request.headers["Referer"]
-    return true if origin.blank? # Allow server-to-server requests
+    origin = request.headers['Origin'] || request.headers['Referer']
+
+    # This prevents direct API calls that bypass domain whitelisting.
+    # Server-to-server integrations should use the Admin API with JWT auth instead.
+    if origin.blank?
+      Rails.logger.warn("[Security] Embed request rejected: missing Origin/Referer header from IP #{request.remote_ip}")
+      return false
+    end
 
     domain = extract_domain(origin)
+    return false if domain.blank?
+
     return true if Rails.env.development? && domain.in?(%w[localhost 127.0.0.1])
 
     @current_company.domain_allowed?(domain)

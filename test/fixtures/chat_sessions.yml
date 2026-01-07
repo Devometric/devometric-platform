@@ -1,0 +1,29 @@
+# frozen_string_literal: true
+
+session_one:
+  company: acme
+  session_token: test_session_token_abc123
+  session_secret: test_session_secret_xyz789
+  external_user_id: user_123
+  user_context:
+    role: developer
+    team: backend
+  locale: en
+  started_at: <%= 1.hour.ago.to_s(:db) %>
+
+session_two:
+  company: acme
+  session_token: test_session_token_def456
+  session_secret: test_session_secret_uvw456
+  external_user_id: user_456
+  locale: en
+  started_at: <%= 2.hours.ago.to_s(:db) %>
+
+ended_session:
+  company: acme
+  session_token: test_session_token_ended
+  session_secret: test_session_secret_ended
+  external_user_id: user_123
+  locale: en
+  started_at: <%= 1.day.ago.to_s(:db) %>
+  ended_at: <%= 23.hours.ago.to_s(:db) %>

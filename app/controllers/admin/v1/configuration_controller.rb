@@ -8,7 +8,21 @@ module Admin
       end
 
       def update
+        # Track which fields are changing for audit
+        changed_fields = configuration_params.keys.select do |key|
+          current_company.send(key) != configuration_params[key]
+        end
+
         current_company.update!(configuration_params)
+
+        AuditLog.log!(
+          company: current_company,
+          action: "config_update",
+          actor: current_company_admin,
+          request: request,
+          metadata: { changed_fields: changed_fields }
+        )
+
         render json: { configuration: configuration_json }
       end
 

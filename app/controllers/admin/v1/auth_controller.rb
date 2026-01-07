@@ -9,12 +9,30 @@ module Admin
         admin = CompanyAdmin.find_by(email: auth_params[:email]&.downcase)
 
         if admin&.valid_password?(auth_params[:password])
+          AuditLog.log!(
+            company: admin.company,
+            action: "admin_login",
+            actor: admin,
+            request: request
+          )
+
           token = encode_jwt(admin_id: admin.id)
           render json: {
             token: token,
             admin: admin_json(admin)
           }
         else
+          # Log failed attempts if we found an admin (helps detect brute force)
+          if admin
+            AuditLog.log!(
+              company: admin.company,
+              action: "admin_login_failed",
+              actor: admin,
+              request: request,
+              metadata: { reason: "invalid_password" }
+            )
+          end
+
           render json: { error: "Invalid email or password" }, status: :unauthorized
         end
       end

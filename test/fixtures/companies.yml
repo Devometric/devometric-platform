@@ -1,0 +1,16 @@
+# frozen_string_literal: true
+
+acme:
+  name: Acme Corp
+  slug: acme-corp
+  embed_key: test_embed_key_12345
+  system_prompt: "You are a helpful assistant"
+  active: true
+  settings:
+    retention_days: 30
+
+inactive_company:
+  name: Inactive Corp
+  slug: inactive-corp
+  embed_key: inactive_embed_key_67890
+  active: false

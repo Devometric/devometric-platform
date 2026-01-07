@@ -46,6 +46,9 @@ module Admin
         @current_admin
       end
 
+      # Alias for audit logging compatibility
+      alias_method :current_company_admin, :current_admin
+
       def current_company
         @current_admin&.company
       end

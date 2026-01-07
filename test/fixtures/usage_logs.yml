@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+
+today_log:
+  company: acme
+  date: <%= Date.current.to_s(:db) %>
+  sessions_count: 5
+  messages_count: 25
+  unique_users_count: 3
+  tokens_used: 1000
